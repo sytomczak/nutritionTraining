@@ -1,4 +1,22 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.forearms;
 
-public class ForearmsAreas {
+import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
+import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ForearmsAreas implements Exerciseable {
+
+    public List<Exercise> getExercises() {
+        List<Exercise> exercises = new ArrayList<Exercise>();
+        exercises.add(Exercise.BARBELL_WRIST_EXTENSION);
+        exercises.add(Exercise.BARBELL_WRIST_EXTENSION_UNDERHAND);
+        exercises.add(Exercise.ROTATING_FOREARMS_WITH_DUMBBELLS);
+
+        return exercises;
+
+    }
+
+
 }

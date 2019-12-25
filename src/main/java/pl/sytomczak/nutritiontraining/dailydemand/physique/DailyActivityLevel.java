@@ -1,6 +1,6 @@
 package pl.sytomczak.nutritiontraining.dailydemand.physique;
 
-public enum DailyActivity {
+public enum DailyActivityLevel {
     LOW,
     MEDIUM,
     HIGH;
