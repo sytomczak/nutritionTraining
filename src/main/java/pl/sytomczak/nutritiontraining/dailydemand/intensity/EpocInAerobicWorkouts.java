@@ -5,7 +5,6 @@ public enum EpocInAerobicWorkouts {
         MEDIUM(35),
         HIGH(180);
 
-        //@Getter mi nie dziala
         private int numberOfEpoc;
 
         EpocInAerobicWorkouts(int numberOfEpoc) {this.numberOfEpoc = numberOfEpoc;}

@@ -2,9 +2,9 @@ package pl.sytomczak.nutritiontraining.dailydemand;
 
 public class CalculationResult {
     private double bmi;
-    private double demandInKcal;
+    private int demandInKcal;
 
-    public CalculationResult(double bmi, double demandInKcal) {
+    public CalculationResult(double bmi, int demandInKcal) {
         this.bmi = bmi;
         this.demandInKcal = demandInKcal;
     }
@@ -13,7 +13,7 @@ public class CalculationResult {
         return bmi;
     }
 
-    public double getDemandInKcal() {
+    public int getDemandInKcal() {
         return demandInKcal;
     }
 
