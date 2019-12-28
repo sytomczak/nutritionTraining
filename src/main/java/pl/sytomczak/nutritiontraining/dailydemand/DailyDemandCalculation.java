@@ -149,8 +149,7 @@ public class DailyDemandCalculation {
         return burnedKcalInExercises;
     }
 
-
-    private double calculateBMR() {
+    protected double calculateBMR() {
 
         double BMR = 0;
 
@@ -214,4 +213,101 @@ public class DailyDemandCalculation {
 
         return Math.round(bmi *100.0) / 100.0;
     }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Physique getPhysique() {
+        return physique;
+    }
+
+    public void setPhysique(Physique physique) {
+        this.physique = physique;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public DailyActivityLevel getSelectedDailyActivity() {
+        return selectedDailyActivity;
+    }
+
+    public void setSelectedDailyActivity(DailyActivityLevel selectedDailyActivity) {
+        this.selectedDailyActivity = selectedDailyActivity;
+    }
+
+    public int getNumberOfStrongWorkoutsInWeek() {
+        return numberOfStrongWorkoutsInWeek;
+    }
+
+    public void setNumberOfStrongWorkoutsInWeek(int numberOfStrongWorkoutsInWeek) {
+        this.numberOfStrongWorkoutsInWeek = numberOfStrongWorkoutsInWeek;
+    }
+
+    public int getDurationOfOneStrongWorkout() {
+        return durationOfOneStrongWorkout;
+    }
+
+    public void setDurationOfOneStrongWorkout(int durationOfOneStrongWorkout) {
+        this.durationOfOneStrongWorkout = durationOfOneStrongWorkout;
+    }
+
+    public int getNumberOfAerobicWorkoutsInWeek() {
+        return numberOfAerobicWorkoutsInWeek;
+    }
+
+    public void setNumberOfAerobicWorkoutsInWeek(int numberOfAerobicWorkoutsInWeek) {
+        this.numberOfAerobicWorkoutsInWeek = numberOfAerobicWorkoutsInWeek;
+    }
+
+    public int getDurationOfOneAerobicWorkout() {
+        return durationOfOneAerobicWorkout;
+    }
+
+    public void setDurationOfOneAerobicWorkout(int durationOfOneAerobicWorkout) {
+        this.durationOfOneAerobicWorkout = durationOfOneAerobicWorkout;
+    }
+
+    public IntensityOfStrongWorkoutsLevel getIntensityOfStrongWorkoutsLevel() {
+        return intensityOfStrongWorkoutsLevel;
+    }
+
+    public void setIntensityOfStrongWorkoutsLevel(IntensityOfStrongWorkoutsLevel intensityOfStrongWorkoutsLevel) {
+        this.intensityOfStrongWorkoutsLevel = intensityOfStrongWorkoutsLevel;
+    }
+
+    public IntensityOfAerobicWorkoutsLevel getIntensityOfAerobicWorkoutsLevel() {
+        return intensityOfAerobicWorkoutsLevel;
+    }
+
+    public void setIntensityOfAerobicWorkoutsLevel(IntensityOfAerobicWorkoutsLevel intensityOfAerobicWorkoutsLevel) {
+        this.intensityOfAerobicWorkoutsLevel = intensityOfAerobicWorkoutsLevel;
+    }
+
 }
