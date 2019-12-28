@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="20" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="649"/>
+      <xy x="20" y="20" width="500" height="627"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -93,7 +93,12 @@
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <toolTipText value="&lt;html&gt;Add the id given to you&lt;br&gt;in the beginning!&lt;/html&gt;"/>
+          <model>
+            <item value="ENDOMORPH"/>
+            <item value="MESOMORPH"/>
+            <item value="ECTOMORPH"/>
+          </model>
+          <toolTipText value="&lt;html&gt;&#10;&lt;br&gt;ENDOMORPH&#10;&lt;br&gt;-Soft and round body&#10;&lt;br&gt;-Gains muscle and fat very easily&#10;&lt;br&gt;-Is generally short&#10;&lt;br&gt;-&quot;Stocky&quot; build&#10;&lt;br&gt;-Round physique&#10;&lt;br&gt;-Finds it hard to lose fat&#10;&lt;br&gt;-Slow metabolism&#10;&lt;br&gt;-Muscles not so well defined&#10;&lt;br&gt;&#10;&lt;br&gt;MESOMORPH&#10;&lt;br&gt;-Athletic&#10;&lt;br&gt;-Generally hard body&#10;&lt;br&gt;-Well defined muscles&#10;&lt;br&gt;-Rectangular shaped body&#10;&lt;br&gt;-Strong&#10;&lt;br&gt;-Gains muscle easily&#10;&lt;br&gt;-Gains fat more easily than ectomorphs&#10;&lt;br&gt;&#10;&lt;br&gt;ECTOMORPH&#10;&lt;br&gt;-Small “delicate” frame and bone structure&#10;&lt;br&gt;-Classic “hardgainer”&#10;&lt;br&gt;-Flat chest&#10;&lt;br&gt;-Small shoulders&#10;&lt;br&gt;-Thin&#10;&lt;br&gt;-Lean muscle mass&#10;&lt;br&gt;-Finds it hard to gain weight&#10;&lt;br&gt;-Fast metabolism&#10;&lt;br&gt;&#10;&lt;/html&gt;"/>
         </properties>
       </component>
       <component id="3f169" class="javax.swing.JLabel" binding="dailyActivityJLabel">
@@ -108,7 +113,14 @@
         <constraints>
           <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Low"/>
+            <item value="Medium"/>
+            <item value="High"/>
+          </model>
+          <toolTipText value="&lt;html&gt;&#10;&lt;br&gt;ENDOMORPH:&#10;&lt;br&gt;Low - 200 kcal&#10;&lt;br&gt;Medium - 300 kcal&#10;&lt;br&gt;High - 400 kcal&#10;&lt;br&gt;&#10;&lt;br&gt;MESOMORPH:&#10;&lt;br&gt;Low - 400 kcal&#10;&lt;br&gt;Medium - 450 kcal&#10;&lt;br&gt;High - 500 kcal&#10;&lt;br&gt;&#10;&lt;br&gt;ECTOMORPH:&#10;&lt;br&gt;Low - 700 kcal&#10;&lt;br&gt;Medium - 800 kcal&#10;&lt;br&gt;High - 900 kcal&#10;&lt;br&gt;&#10;&lt;/html&gt;&#10;"/>
+        </properties>
       </component>
       <hspacer id="3a457">
         <constraints>
@@ -222,13 +234,25 @@
         <constraints>
           <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Low"/>
+            <item value="Medium"/>
+            <item value="High"/>
+          </model>
+        </properties>
       </component>
       <component id="c06b" class="javax.swing.JComboBox" binding="intensityOfStrongWorkoutComboBox1">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Low"/>
+            <item value="Medium"/>
+            <item value="High"/>
+          </model>
+        </properties>
       </component>
       <hspacer id="c0edd">
         <constraints>
@@ -240,7 +264,7 @@
           <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <component id="10575" class="javax.swing.JLabel" binding="resultTdeeJPanel">
+      <component id="10575" class="javax.swing.JLabel" binding="resultTdeejLabell">
         <constraints>
           <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -251,9 +275,9 @@
       <component id="aea4f" class="javax.swing.JTextField" binding="dailyDemandTextField1">
         <constraints>
           <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="150" height="50"/>
-            <preferred-size width="150" height="50"/>
-            <maximum-size width="150" height="50"/>
+            <minimum-size width="200" height="20"/>
+            <preferred-size width="200" height="20"/>
+            <maximum-size width="200" height="20"/>
           </grid>
         </constraints>
         <properties>
@@ -272,9 +296,9 @@
       <component id="8d421" class="javax.swing.JTextField" binding="bmiTextField">
         <constraints>
           <grid row="18" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="150" height="30"/>
-            <preferred-size width="150" height="30"/>
-            <maximum-size width="150" height="50"/>
+            <minimum-size width="200" height="20"/>
+            <preferred-size width="200" height="20"/>
+            <maximum-size width="200" height="20"/>
           </grid>
         </constraints>
         <properties>

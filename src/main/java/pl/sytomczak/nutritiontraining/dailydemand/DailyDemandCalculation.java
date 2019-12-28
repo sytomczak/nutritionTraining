@@ -23,21 +23,7 @@ public class DailyDemandCalculation {
     private IntensityOfStrongWorkoutsLevel intensityOfStrongWorkoutsLevel;
     private IntensityOfAerobicWorkoutsLevel intensityOfAerobicWorkoutsLevel;
 
-    public CalculationResult calculateDailyDemand(Gender gender, int age, int weight, int height, Physique physique, DailyActivityLevel selectedDailyActivity, int numberOfAerobicWorkoutsInWeek, int durationOfOneAerobicWorkout, IntensityOfAerobicWorkoutsLevel intensityOfAerobicWorkoutsLevel, int numberOfStrongWorkoutsInWeek, int durationOfOneStrongWorkout, IntensityOfStrongWorkoutsLevel intensityOfStrongWorkoutsLevel) {
-        this.gender = gender;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
-        this.physique = physique;
-        this.selectedDailyActivity = selectedDailyActivity;
-        this.numberOfAerobicWorkoutsInWeek = numberOfAerobicWorkoutsInWeek;
-        this.durationOfOneAerobicWorkout = durationOfOneAerobicWorkout;
-        this.intensityOfAerobicWorkoutsLevel = intensityOfAerobicWorkoutsLevel;
-        this.numberOfStrongWorkoutsInWeek = numberOfStrongWorkoutsInWeek;
-        this.durationOfOneStrongWorkout = durationOfOneStrongWorkout;
-        this.intensityOfStrongWorkoutsLevel = intensityOfStrongWorkoutsLevel;
-
-
+    public CalculationResult calculateDailyDemand() {
         double bmiResult = calculateBmi();
         int demandInKcalResult = (int) dailyDemand();
         return new CalculationResult(bmiResult, demandInKcalResult);

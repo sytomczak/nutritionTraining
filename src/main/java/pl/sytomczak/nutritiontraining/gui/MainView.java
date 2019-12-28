@@ -1,6 +1,12 @@
 package pl.sytomczak.nutritiontraining.gui;
 
+import org.omg.CORBA.DATA_CONVERSION;
 import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
+import pl.sytomczak.nutritiontraining.dailydemand.Gender;
+import pl.sytomczak.nutritiontraining.dailydemand.intensity.IntensityOfAerobicWorkoutsLevel;
+import pl.sytomczak.nutritiontraining.dailydemand.intensity.IntensityOfStrongWorkoutsLevel;
+import pl.sytomczak.nutritiontraining.dailydemand.physique.DailyActivityLevel;
+import pl.sytomczak.nutritiontraining.dailydemand.physique.Physique;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -36,15 +42,14 @@ public class MainView extends JDialog {
     private JComboBox intensityOfAerobicWorkoutComboBox;
     private JComboBox intensityOfStrongWorkoutComboBox1;
     private JTextField dailyDemandTextField1;
-    private JLabel resultTdeeJPanel;
+    private JLabel resultTdeejLabell;
     private JLabel bmiJLabel;
     private JTextField bmiTextField;
 
     private DailyDemandCalculation dailyDemandCalculation;
 
     public MainView() {
-        initializeDailyDemandCalculation();
-
+        dailyDemandCalculation = new DailyDemandCalculation();
         setContentPane(mainPanel);
         setModal(true);
         getRootPane().setDefaultButton(calculateButton);
@@ -56,55 +61,116 @@ public class MainView extends JDialog {
             }
         });
 
+        womanRadioButton.addActionListener(e -> onSelectWomanRadioButton());
+        manRadioButton.addActionListener(e -> onSelectManRadioButton());
+
         physiqueComboBox.addActionListener(e -> onSelectPhysique());
         dailyActivityComboBox.addActionListener(e -> onSelectDailyActivity());
         intensityOfAerobicWorkoutComboBox.addActionListener(e -> onSelectIntensityOfAerobicWorkout());
         intensityOfStrongWorkoutComboBox1.addActionListener(e -> onSelectIntensityOfStrongWorkout());
     }
 
-
-    private void initializeDailyDemandCalculation() {
-        dailyDemandCalculation = new DailyDemandCalculation();
-
+    private void onSelectManRadioButton() {
+        dailyDemandCalculation.setGender(Gender.MALE);
     }
 
+    private void onSelectWomanRadioButton() {
+        dailyDemandCalculation.setGender(Gender.FEMALE);
+    }
+
+
     private void onSelectIntensityOfStrongWorkout() {
+        switch ((String) intensityOfStrongWorkoutComboBox1.getSelectedItem()) {
+            case "Low":
+                dailyDemandCalculation.setIntensityOfStrongWorkoutsLevel(IntensityOfStrongWorkoutsLevel.LOW);
+                break;
+            case "Medium":
+                dailyDemandCalculation.setIntensityOfStrongWorkoutsLevel(IntensityOfStrongWorkoutsLevel.MEDIUM);
+                break;
+            case "High":
+                dailyDemandCalculation.setIntensityOfStrongWorkoutsLevel(IntensityOfStrongWorkoutsLevel.HIGH);
+                break;
+            default:
+                break;
+        }
 
     }
 
     private void onSelectIntensityOfAerobicWorkout() {
+        switch ((String) intensityOfAerobicWorkoutComboBox.getSelectedItem()) {
+            case "Low":
+                dailyDemandCalculation.setIntensityOfAerobicWorkoutsLevel(IntensityOfAerobicWorkoutsLevel.LOW);
+                break;
+            case "Medium":
+                dailyDemandCalculation.setIntensityOfAerobicWorkoutsLevel(IntensityOfAerobicWorkoutsLevel.MEDIUM);
+                break;
+            case "High":
+                dailyDemandCalculation.setIntensityOfAerobicWorkoutsLevel(IntensityOfAerobicWorkoutsLevel.HIGH);
+                break;
+            default:
+                break;
+        }
 
     }
 
     private void onSelectDailyActivity() {
-
+        switch ((String) dailyActivityComboBox.getSelectedItem()) {
+            case "Low":
+                dailyDemandCalculation.setSelectedDailyActivity(DailyActivityLevel.LOW);
+                break;
+            case "Medium":
+                dailyDemandCalculation.setSelectedDailyActivity(DailyActivityLevel.MEDIUM);
+                break;
+            case "High":
+                dailyDemandCalculation.setSelectedDailyActivity(DailyActivityLevel.HIGH);
+                break;
+            default:
+                break;
+        }
     }
 
     private void onSelectPhysique() {
-//        switch ((String) physiqueComboBox.getSelectedItem()) {
-//            case
-//        }
+        switch ((String) physiqueComboBox.getSelectedItem()) {
+            case "ENDOMORPH":
+                dailyDemandCalculation.setPhysique(Physique.ENDOMORPH);
+                break;
+            case "MESOMORPH":
+                dailyDemandCalculation.setPhysique(Physique.MESOMORPH);
+                break;
+            case "ECTOMORPH":
+                dailyDemandCalculation.setPhysique(Physique.ECTOMORPH);
+                break;
+            default:
+                break;
+        }
     }
 
     private void onCalculate() {
         setFieldValues();
+        this.dailyDemandTextField1.setText(String.valueOf(dailyDemandCalculation.calculateDailyDemand().getDemandInKcal()));
+        this.bmiTextField.setText(String.valueOf(dailyDemandCalculation.calculateDailyDemand().getBmi()));
     }
+
 
     private void setFieldValues() {
-        if (isNumeric(this.ageTextField.getText()))
-            dailyDemandCalculation.setAge(Integer.parseInt(this.ageTextField.getText())); // tak jak to sama linia
-        else this.ageTextField.setText("Number only");
-        System.out.println(dailyDemandCalculation.getAge());
-
-
-    }
-
-    private boolean isNumeric(String text) {
         try {
-            Integer.parseInt(text);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
+            dailyDemandCalculation.setAge(Integer.parseInt(this.ageTextField.getText()));
+            dailyDemandCalculation.setWeight(Integer.parseInt(this.weightTextField.getText()));
+            dailyDemandCalculation.setHeight(Integer.parseInt(this.heightTextField.getText()));
+            dailyDemandCalculation.setNumberOfStrongWorkoutsInWeek(Integer.parseInt(this.numberOfStrongWorkoutsInWeekTextField.getText()));
+            dailyDemandCalculation.setDurationOfOneStrongWorkout(Integer.parseInt(this.durationOfStrongWorkoutTextField.getText()));
+            dailyDemandCalculation.setNumberOfAerobicWorkoutsInWeek(Integer.parseInt(this.numberOfAerobicWorkoutsInWeekTextField1.getText()));
+            dailyDemandCalculation.setDurationOfOneAerobicWorkout(Integer.parseInt(this.durationOfAerobicWorkoutTextField1.getText()));
+        } catch (Exception z) {
+            JOptionPane.showMessageDialog(this, "Number only", "Inane error", JOptionPane.ERROR_MESSAGE);
+            dailyDemandCalculation.setAge(Integer.parseInt(this.ageTextField.getText()));
+            dailyDemandCalculation.setWeight(Integer.parseInt(this.weightTextField.getText()));
+            dailyDemandCalculation.setHeight(Integer.parseInt(this.heightTextField.getText()));
+            dailyDemandCalculation.setNumberOfStrongWorkoutsInWeek(Integer.parseInt(this.numberOfStrongWorkoutsInWeekTextField.getText()));
+            dailyDemandCalculation.setDurationOfOneStrongWorkout(Integer.parseInt(this.durationOfStrongWorkoutTextField.getText()));
+            dailyDemandCalculation.setNumberOfAerobicWorkoutsInWeek(Integer.parseInt(this.numberOfAerobicWorkoutsInWeekTextField1.getText()));
+            dailyDemandCalculation.setDurationOfOneAerobicWorkout(Integer.parseInt(this.durationOfAerobicWorkoutTextField1.getText()));
+            return;
         }
     }
 

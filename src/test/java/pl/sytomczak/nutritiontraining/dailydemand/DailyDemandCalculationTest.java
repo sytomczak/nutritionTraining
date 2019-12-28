@@ -26,7 +26,20 @@ class DailyDemandCalculationTest {
     @MethodSource("provideDataForDemandCalculation")
     public void shouldCalculateDailyDemand(CalculationResult expectedResult, Gender gender, int age, int weight, int height, Physique physique, DailyActivityLevel selectedDailyActivity, int numberOfAerobicWorkoutsInWeek, int durationOfOneAerobicWorkout, IntensityOfAerobicWorkoutsLevel intensityOfAerobicWorkoutsLevel, int numberOfStrongWorkoutsInWeek, int durationOfOneStrongWorkout, IntensityOfStrongWorkoutsLevel intensityOfStrongWorkoutsLevel) {
 
-        CalculationResult result = calculator.calculateDailyDemand(gender, age, weight, height, physique, selectedDailyActivity, numberOfAerobicWorkoutsInWeek, durationOfOneAerobicWorkout, intensityOfAerobicWorkoutsLevel, numberOfStrongWorkoutsInWeek, durationOfOneStrongWorkout, intensityOfStrongWorkoutsLevel);
+        calculator.setGender(gender);
+        calculator.setAge(age);
+        calculator.setWeight(weight);
+        calculator.setHeight(height);
+        calculator.setPhysique(physique);
+        calculator.setSelectedDailyActivity(selectedDailyActivity);
+        calculator.setNumberOfAerobicWorkoutsInWeek(numberOfAerobicWorkoutsInWeek);
+        calculator.setDurationOfOneAerobicWorkout(durationOfOneAerobicWorkout);
+        calculator.setIntensityOfAerobicWorkoutsLevel(intensityOfAerobicWorkoutsLevel);
+        calculator.setNumberOfStrongWorkoutsInWeek(numberOfStrongWorkoutsInWeek);
+        calculator.setDurationOfOneStrongWorkout(durationOfOneStrongWorkout);
+        calculator.setIntensityOfStrongWorkoutsLevel(intensityOfStrongWorkoutsLevel);
+
+        CalculationResult result = calculator.calculateDailyDemand();
         Assertions.assertEquals(expectedResult, result);
     }
 
