@@ -9,8 +9,12 @@ import pl.sytomczak.nutritiontraining.dailydemand.physique.DailyActivityLevel;
 import pl.sytomczak.nutritiontraining.dailydemand.physique.Physique;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class MainView extends JDialog {
 
@@ -45,6 +49,7 @@ public class MainView extends JDialog {
     private JLabel resultTdeejLabell;
     private JLabel bmiJLabel;
     private JTextField bmiTextField;
+    private JButton bodyButton;
 
     private DailyDemandCalculation dailyDemandCalculation;
 
@@ -63,11 +68,20 @@ public class MainView extends JDialog {
 
         womanRadioButton.addActionListener(e -> onSelectWomanRadioButton());
         manRadioButton.addActionListener(e -> onSelectManRadioButton());
-
         physiqueComboBox.addActionListener(e -> onSelectPhysique());
         dailyActivityComboBox.addActionListener(e -> onSelectDailyActivity());
         intensityOfAerobicWorkoutComboBox.addActionListener(e -> onSelectIntensityOfAerobicWorkout());
         intensityOfStrongWorkoutComboBox1.addActionListener(e -> onSelectIntensityOfStrongWorkout());
+
+        bodyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Atlas atlasDialog = new Atlas();
+                atlasDialog.pack();
+                atlasDialog.setVisible(true);
+
+            }
+        });
     }
 
     private void onSelectManRadioButton() {
@@ -131,13 +145,13 @@ public class MainView extends JDialog {
 
     private void onSelectPhysique() {
         switch ((String) physiqueComboBox.getSelectedItem()) {
-            case "ENDOMORPH":
+            case "Endomorph":
                 dailyDemandCalculation.setPhysique(Physique.ENDOMORPH);
                 break;
-            case "MESOMORPH":
+            case "Mesomorpg":
                 dailyDemandCalculation.setPhysique(Physique.MESOMORPH);
                 break;
-            case "ECTOMORPH":
+            case "Ectomorph":
                 dailyDemandCalculation.setPhysique(Physique.ECTOMORPH);
                 break;
             default:
@@ -179,5 +193,6 @@ public class MainView extends JDialog {
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
+
     }
 }
