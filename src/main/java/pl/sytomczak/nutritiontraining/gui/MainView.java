@@ -16,7 +16,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class MainView extends JDialog {
+public class MainView extends JFrame {
 
     private JPanel mainPanel;
     private JButton calculateButton;
@@ -56,7 +56,6 @@ public class MainView extends JDialog {
     public MainView() {
         dailyDemandCalculation = new DailyDemandCalculation();
         setContentPane(mainPanel);
-        setModal(true);
         getRootPane().setDefaultButton(calculateButton);
 
         calculateButton.addActionListener(new ActionListener() {
@@ -79,7 +78,7 @@ public class MainView extends JDialog {
                 Atlas atlasDialog = new Atlas();
                 atlasDialog.pack();
                 atlasDialog.setVisible(true);
-
+                atlasDialog.setLocationRelativeTo(null);
             }
         });
     }
@@ -192,7 +191,6 @@ public class MainView extends JDialog {
         MainView dialog = new MainView();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
-
+        dialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }

@@ -1,8 +1,8 @@
 package pl.sytomczak.nutritiontraining.gui;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Atlas extends JDialog {
     private JButton closeButton;
@@ -11,8 +11,10 @@ public class Atlas extends JDialog {
 
     public Atlas() {
 
-        photo1jLabel.setIcon((new ImageIcon((getClass().getResource("/tyl.jpg"))))); //dziala!!!!!!!!!
         setContentPane(bodyJPanel);
+        photo1jLabel.setIcon((new ImageIcon((getClass().getResource("/body.jpg")))));
+        setLocationRelativeTo(getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         closeButton.addActionListener(new ActionListener() {
             @Override
@@ -21,4 +23,4 @@ public class Atlas extends JDialog {
             }
         });
     }
-}
+};
