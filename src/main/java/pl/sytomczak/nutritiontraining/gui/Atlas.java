@@ -23,15 +23,16 @@ public class Atlas extends JDialog {
                 dispose();
             }
         });
-        photo1jLabel.setLayout(new OverlayLayout(photo1jLabel));
 
-        JButton button = new JButton("Show Message");
-        button.setAlignmentX(-1000);
-        button.setAlignmentY(-1000);
+        JButton button = new JButton();
+        photo1jLabel.setLayout(null);
+        button.setBounds(150,290,10,10);
+        photo1jLabel.add(button);
 
         JPanel popupPanel = createPopupPanel(button);
         popupPanel.setAlignmentX(100);
         popupPanel.setAlignmentY(100);
+       // photo1jLabel.setLayout(new OverlayLayout(photo1jLabel));
 
         button.addActionListener(e -> {
             button.setEnabled(false);
