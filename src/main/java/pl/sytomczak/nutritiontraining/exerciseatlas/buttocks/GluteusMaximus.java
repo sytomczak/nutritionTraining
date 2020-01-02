@@ -3,8 +3,7 @@ package pl.sytomczak.nutritiontraining.exerciseatlas.buttocks;
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class GluteusMaximus implements Exerciseable {
 
@@ -31,6 +30,4 @@ public class GluteusMaximus implements Exerciseable {
 
         return exercises;
     }
-
-
 }

@@ -1,7 +1,5 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas;
 
-import java.util.regex.Pattern;
-
 public enum Exercise {
     SIDE_PLANK_ON_A_HAND(),
     CURL(),
