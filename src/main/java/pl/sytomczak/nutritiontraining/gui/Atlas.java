@@ -10,6 +10,9 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.calves.TibialisAnteriorAreas
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.BicepsFemorisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.GracilisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.TensorOfFasciaLataAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.musclesofback.ErectorSpinaeAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.musclesofback.LatissimusDorsiAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.musclesofback.TrapeziusAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.AdductorLongusArea;
 import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.VastusLateralisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.rectusabdominismuscle.RectusAbdominisAreas;
@@ -35,6 +38,10 @@ public class Atlas extends JDialog {
     private VastusLateralisAreas vastusLateralisAreas;
     private RectusAbdominisAreas rectusAbdominisAreas;
     private ExternalObliqueAreas externalObliqueAreas;
+    private ErectorSpinaeAreas erectorSpinaeAreas;
+    private LatissimusDorsiAreas latissimusDorsiAreas;
+    private TrapeziusAreas trapeziusAreas;
+
 
 
 
@@ -116,6 +123,21 @@ public class Atlas extends JDialog {
         photo1jLabel.setLayout(null);
         externalObliqueAreasButton.setBounds(405, 200, 10, 10);
         photo1jLabel.add(externalObliqueAreasButton);
+
+        JButton erectorSpinaeAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        erectorSpinaeAreasButton.setBounds(190, 200, 10, 10);
+        photo1jLabel.add(erectorSpinaeAreasButton);
+
+        JButton latissimusDorsiAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        latissimusDorsiAreasButton.setBounds(210, 170, 10, 10);
+        photo1jLabel.add(latissimusDorsiAreasButton);
+
+        JButton trapeziusAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        trapeziusAreasButton.setBounds(155, 120, 10, 10);
+        photo1jLabel.add(trapeziusAreasButton);
 
 
 //        ----------------------
@@ -224,6 +246,29 @@ public class Atlas extends JDialog {
             }
         });
 
+        erectorSpinaeAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                erectorSpinaeAreas = new ErectorSpinaeAreas();
+                System.out.println(erectorSpinaeAreas.getExercises());
+            }
+        });
+
+        latissimusDorsiAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                latissimusDorsiAreas = new LatissimusDorsiAreas();
+                System.out.println(latissimusDorsiAreas.getExercises());
+            }
+        });
+
+        trapeziusAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                trapeziusAreas = new TrapeziusAreas();
+                System.out.println(trapeziusAreas.getExercises());
+            }
+        });
 
         //
 //        JPanel popupPanel = createPopupPanel(gluteusMaximusbButton);
