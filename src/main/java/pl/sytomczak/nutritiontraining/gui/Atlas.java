@@ -9,6 +9,7 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.calves.GastrocnemiusAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.calves.TibialisAnteriorAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles.PectoralisMajor;
 import pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles.PectoralisMajorUpperPart;
+import pl.sytomczak.nutritiontraining.exerciseatlas.deltoidmuscle.DeltoidAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.BicepsFemorisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.GracilisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.TensorOfFasciaLataAreas;
@@ -45,6 +46,7 @@ public class Atlas extends JDialog {
     private TrapeziusAreas trapeziusAreas;
     private PectoralisMajor pectoralisMajor;
     private PectoralisMajorUpperPart pectoralisMajorUpperPart;
+    private DeltoidAreas deltoidAreas;
 
 
     public Atlas() {
@@ -150,6 +152,11 @@ public class Atlas extends JDialog {
         photo1jLabel.setLayout(null);
         pectoralisMajorUpperPartButton.setBounds(470, 120, 10, 10);
         photo1jLabel.add(pectoralisMajorUpperPartButton);
+
+        JButton deltoidAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        deltoidAreasButton.setBounds(375, 110, 10, 10);
+        photo1jLabel.add(deltoidAreasButton);
 
 
 //        ----------------------
@@ -295,6 +302,14 @@ public class Atlas extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 pectoralisMajorUpperPart = new PectoralisMajorUpperPart();
                 System.out.println(pectoralisMajorUpperPart.getExercises());
+            }
+        });
+
+        deltoidAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adductorLongusArea = new AdductorLongusArea();
+                System.out.println(adductorLongusArea.getExercises());
             }
         });
 
