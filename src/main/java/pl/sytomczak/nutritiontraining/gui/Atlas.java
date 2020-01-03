@@ -4,9 +4,13 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximus;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximusExternalBottomAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMedius;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMinimus;
+import pl.sytomczak.nutritiontraining.exerciseatlas.calves.GastrocnemiusAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.calves.TibialisAnteriorAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.BicepsFemorisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.GracilisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.TensorOfFasciaLataAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.AdductorLongusArea;
+import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.VastusLateralisAreas;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -23,6 +27,10 @@ public class Atlas extends JDialog {
     private BicepsFemorisAreas bicepsFemorisAreas;
     private GracilisAreas gracilisAreas;
     private TensorOfFasciaLataAreas tensorOfFasciaLataAreas;
+    private GastrocnemiusAreas gastrocnemiusAreas;
+    private TibialisAnteriorAreas tibialisAnteriorAreas;
+    private AdductorLongusArea adductorLongusArea;
+    private VastusLateralisAreas vastusLateralisAreas;
 
 
 
@@ -74,6 +82,26 @@ public class Atlas extends JDialog {
         photo1jLabel.setLayout(null);
         tensorOfFasciaLataAreasButton.setBounds(180, 330, 10, 10);
         photo1jLabel.add(tensorOfFasciaLataAreasButton);
+
+        JButton gastrocnemiusAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        gastrocnemiusAreasButton.setBounds(200, 460, 10, 10);
+        photo1jLabel.add(gastrocnemiusAreasButton);
+
+        JButton tibialisAnteriorAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        tibialisAnteriorAreasButton.setBounds(410, 480, 10, 10);
+        photo1jLabel.add(tibialisAnteriorAreasButton);
+
+        JButton adductorLongusAreaButton = new JButton();
+        photo1jLabel.setLayout(null);
+        adductorLongusAreaButton.setBounds(410, 350, 10, 10);
+        photo1jLabel.add(adductorLongusAreaButton);
+
+        JButton vastusLateralisAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        vastusLateralisAreasButton.setBounds(430, 320, 10, 10);
+        photo1jLabel.add(vastusLateralisAreasButton);
 
 
 //        ----------------------
@@ -131,6 +159,38 @@ public class Atlas extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 tensorOfFasciaLataAreas = new TensorOfFasciaLataAreas();
                 System.out.println(tensorOfFasciaLataAreas.getExercises());
+            }
+        });
+
+        gastrocnemiusAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gastrocnemiusAreas = new GastrocnemiusAreas();
+                System.out.println(gastrocnemiusAreas.getExercises());
+            }
+        });
+
+        tibialisAnteriorAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tibialisAnteriorAreas = new TibialisAnteriorAreas();
+                System.out.println(tibialisAnteriorAreas.getExercises());
+            }
+        });
+
+        adductorLongusAreaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adductorLongusArea = new AdductorLongusArea();
+                System.out.println(adductorLongusArea.getExercises());
+            }
+        });
+
+        vastusLateralisAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                vastusLateralisAreas = new VastusLateralisAreas();
+                System.out.println(vastusLateralisAreas.getExercises());
             }
         });
 
