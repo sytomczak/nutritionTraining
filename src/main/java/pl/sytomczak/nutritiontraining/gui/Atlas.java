@@ -21,6 +21,7 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.musclesofback.TrapeziusAreas
 import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.AdductorLongusArea;
 import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.VastusLateralisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.rectusabdominismuscle.RectusAbdominisAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.triceps.TricepsAreas;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -51,6 +52,7 @@ public class Atlas extends JDialog {
     private DeltoidAreas deltoidAreas;
     private BicepsAreas bicepsAreas;
     private ForearmsAreas forearmsAreas;
+    private TricepsAreas tricepsAreas;
 
 
     public Atlas() {
@@ -172,8 +174,10 @@ public class Atlas extends JDialog {
         forearmsAreasButton.setBounds(515, 220, 10, 10);
         photo1jLabel.add(forearmsAreasButton);
 
-
-//        ----------------------
+        JButton tricepsAreasButtom = new JButton();
+        photo1jLabel.setLayout(null);
+        tricepsAreasButtom.setBounds(105, 145, 10, 10);
+        photo1jLabel.add(tricepsAreasButtom);
 
         gluteusMaximusButton.addActionListener(new ActionListener() {
             @Override
@@ -343,6 +347,14 @@ public class Atlas extends JDialog {
             }
         });
 
+        tricepsAreasButtom.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tricepsAreas = new TricepsAreas();
+                System.out.println(tricepsAreas.getExercises());
+            }
+        });
+
         //
 //        JPanel popupPanel = createPopupPanel(gluteusMaximusbButton);
 //        popupPanel.setAlignmentX(100);
@@ -352,7 +364,7 @@ public class Atlas extends JDialog {
         //    photo1jLabel.setLayout(new OverlayLayout(photo1jLabel));
         //  photo1jLabel.add(popupPanel);
 
-        photo1jLabel.add(gluteusMaximusButton);
+       // photo1jLabel.add(gluteusMaximusButton);
     }
 //
 //    private static JPanel createPopupPanel(JComponent overlapComponent) {

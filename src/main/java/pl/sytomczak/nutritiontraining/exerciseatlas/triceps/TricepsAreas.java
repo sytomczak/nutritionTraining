@@ -6,7 +6,7 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class tricepsAreas implements Exerciseable {
+public class TricepsAreas implements Exerciseable {
 
     public List<Exercise> getExercises() {
         List<Exercise> exercises = new ArrayList<Exercise>();
