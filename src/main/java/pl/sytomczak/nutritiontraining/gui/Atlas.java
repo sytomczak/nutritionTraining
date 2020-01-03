@@ -1,6 +1,7 @@
 package pl.sytomczak.nutritiontraining.gui;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.abdominalobliquemuscle.ExternalObliqueAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.biceps.BicepsAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximus;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximusExternalBottomAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMedius;
@@ -47,6 +48,7 @@ public class Atlas extends JDialog {
     private PectoralisMajor pectoralisMajor;
     private PectoralisMajorUpperPart pectoralisMajorUpperPart;
     private DeltoidAreas deltoidAreas;
+    private BicepsAreas bicepsAreas;
 
 
     public Atlas() {
@@ -157,6 +159,11 @@ public class Atlas extends JDialog {
         photo1jLabel.setLayout(null);
         deltoidAreasButton.setBounds(375, 110, 10, 10);
         photo1jLabel.add(deltoidAreasButton);
+
+        JButton bicepsAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        bicepsAreasButton.setBounds(510, 170, 10, 10);
+        photo1jLabel.add(bicepsAreasButton);
 
 
 //        ----------------------
@@ -308,8 +315,16 @@ public class Atlas extends JDialog {
         deltoidAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                adductorLongusArea = new AdductorLongusArea();
-                System.out.println(adductorLongusArea.getExercises());
+                deltoidAreas = new DeltoidAreas();
+                System.out.println(deltoidAreas.getExercises());
+            }
+        });
+
+        bicepsAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bicepsAreas = new BicepsAreas();
+                System.out.println(bicepsAreas.getExercises());
             }
         });
 
