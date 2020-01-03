@@ -4,6 +4,9 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximus;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximusExternalBottomAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMedius;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMinimus;
+import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.BicepsFemorisAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.GracilisAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.TensorOfFasciaLataAreas;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -17,6 +20,10 @@ public class Atlas extends JDialog {
     private GluteusMedius gluteusMedius;
     private GluteusMaximusExternalBottomAreas gluteusMaximusExternalBottomAreas;
     private GluteusMinimus gluteusMinimus;
+    private BicepsFemorisAreas bicepsFemorisAreas;
+    private GracilisAreas gracilisAreas;
+    private TensorOfFasciaLataAreas tensorOfFasciaLataAreas;
+
 
 
     public Atlas() {
@@ -53,6 +60,21 @@ public class Atlas extends JDialog {
         gluteusMinimusButton.setBounds(210, 270, 10, 10);
         photo1jLabel.add(gluteusMinimusButton);
 
+        JButton bicepsFemorisAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        bicepsFemorisAreasButton.setBounds(205, 370, 10, 10);
+        photo1jLabel.add(bicepsFemorisAreasButton);
+
+        JButton gracillisAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        gracillisAreasButton.setBounds(220, 330, 10, 10);
+        photo1jLabel.add(gracillisAreasButton);
+
+        JButton tensorOfFasciaLataAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        tensorOfFasciaLataAreasButton.setBounds(180, 330, 10, 10);
+        photo1jLabel.add(tensorOfFasciaLataAreasButton);
+
 
 //        ----------------------
 
@@ -85,6 +107,30 @@ public class Atlas extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 gluteusMinimus = new GluteusMinimus();
                 System.out.println(gluteusMinimus.getExercises());
+            }
+        });
+
+        bicepsFemorisAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bicepsFemorisAreas = new BicepsFemorisAreas();
+                System.out.println(bicepsFemorisAreas.getExercises());
+            }
+        });
+
+        gracillisAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gracilisAreas = new GracilisAreas();
+                System.out.println(gracilisAreas.getExercises());
+            }
+        });
+
+        tensorOfFasciaLataAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tensorOfFasciaLataAreas = new TensorOfFasciaLataAreas();
+                System.out.println(tensorOfFasciaLataAreas.getExercises());
             }
         });
 
