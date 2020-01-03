@@ -7,6 +7,8 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMedius;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMinimus;
 import pl.sytomczak.nutritiontraining.exerciseatlas.calves.GastrocnemiusAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.calves.TibialisAnteriorAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles.PectoralisMajor;
+import pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles.PectoralisMajorUpperPart;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.BicepsFemorisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.GracilisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.TensorOfFasciaLataAreas;
@@ -41,8 +43,8 @@ public class Atlas extends JDialog {
     private ErectorSpinaeAreas erectorSpinaeAreas;
     private LatissimusDorsiAreas latissimusDorsiAreas;
     private TrapeziusAreas trapeziusAreas;
-
-
+    private PectoralisMajor pectoralisMajor;
+    private PectoralisMajorUpperPart pectoralisMajorUpperPart;
 
 
     public Atlas() {
@@ -138,6 +140,16 @@ public class Atlas extends JDialog {
         photo1jLabel.setLayout(null);
         trapeziusAreasButton.setBounds(155, 120, 10, 10);
         photo1jLabel.add(trapeziusAreasButton);
+
+        JButton pectoralisMajorButton = new JButton();
+        photo1jLabel.setLayout(null);
+        pectoralisMajorButton.setBounds(470, 150, 10, 10);
+        photo1jLabel.add(pectoralisMajorButton);
+
+        JButton pectoralisMajorUpperPartButton = new JButton();
+        photo1jLabel.setLayout(null);
+        pectoralisMajorUpperPartButton.setBounds(470, 120, 10, 10);
+        photo1jLabel.add(pectoralisMajorUpperPartButton);
 
 
 //        ----------------------
@@ -267,6 +279,22 @@ public class Atlas extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 trapeziusAreas = new TrapeziusAreas();
                 System.out.println(trapeziusAreas.getExercises());
+            }
+        });
+
+        pectoralisMajorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pectoralisMajor = new PectoralisMajor();
+                System.out.println(pectoralisMajor.getExercises());
+            }
+        });
+
+        pectoralisMajorUpperPartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pectoralisMajorUpperPart = new PectoralisMajorUpperPart();
+                System.out.println(pectoralisMajorUpperPart.getExercises());
             }
         });
 
