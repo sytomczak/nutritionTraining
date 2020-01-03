@@ -1,5 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
+import pl.sytomczak.nutritiontraining.exerciseatlas.abdominalobliquemuscle.ExternalObliqueAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximus;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximusExternalBottomAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMedius;
@@ -11,6 +12,7 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.GracilisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.TensorOfFasciaLataAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.AdductorLongusArea;
 import pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps.VastusLateralisAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.rectusabdominismuscle.RectusAbdominisAreas;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -31,6 +33,8 @@ public class Atlas extends JDialog {
     private TibialisAnteriorAreas tibialisAnteriorAreas;
     private AdductorLongusArea adductorLongusArea;
     private VastusLateralisAreas vastusLateralisAreas;
+    private RectusAbdominisAreas rectusAbdominisAreas;
+    private ExternalObliqueAreas externalObliqueAreas;
 
 
 
@@ -102,6 +106,16 @@ public class Atlas extends JDialog {
         photo1jLabel.setLayout(null);
         vastusLateralisAreasButton.setBounds(430, 320, 10, 10);
         photo1jLabel.add(vastusLateralisAreasButton);
+
+        JButton rectusAbdominisAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        rectusAbdominisAreasButton.setBounds(445, 210, 10, 10);
+        photo1jLabel.add(rectusAbdominisAreasButton);
+
+        JButton externalObliqueAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        externalObliqueAreasButton.setBounds(405, 200, 10, 10);
+        photo1jLabel.add(externalObliqueAreasButton);
 
 
 //        ----------------------
@@ -191,6 +205,22 @@ public class Atlas extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 vastusLateralisAreas = new VastusLateralisAreas();
                 System.out.println(vastusLateralisAreas.getExercises());
+            }
+        });
+
+        rectusAbdominisAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                rectusAbdominisAreas = new RectusAbdominisAreas();
+                System.out.println(rectusAbdominisAreas.getExercises());
+            }
+        });
+
+        externalObliqueAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                externalObliqueAreas = new ExternalObliqueAreas();
+                System.out.println(externalObliqueAreas.getExercises());
             }
         });
 
