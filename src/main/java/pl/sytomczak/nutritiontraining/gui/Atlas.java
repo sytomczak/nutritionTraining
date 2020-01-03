@@ -11,6 +11,7 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.calves.TibialisAnteriorAreas
 import pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles.PectoralisMajor;
 import pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles.PectoralisMajorUpperPart;
 import pl.sytomczak.nutritiontraining.exerciseatlas.deltoidmuscle.DeltoidAreas;
+import pl.sytomczak.nutritiontraining.exerciseatlas.forearms.ForearmsAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.BicepsFemorisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.GracilisAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.hamstring.TensorOfFasciaLataAreas;
@@ -49,6 +50,7 @@ public class Atlas extends JDialog {
     private PectoralisMajorUpperPart pectoralisMajorUpperPart;
     private DeltoidAreas deltoidAreas;
     private BicepsAreas bicepsAreas;
+    private ForearmsAreas forearmsAreas;
 
 
     public Atlas() {
@@ -164,6 +166,11 @@ public class Atlas extends JDialog {
         photo1jLabel.setLayout(null);
         bicepsAreasButton.setBounds(510, 170, 10, 10);
         photo1jLabel.add(bicepsAreasButton);
+
+        JButton forearmsAreasButton = new JButton();
+        photo1jLabel.setLayout(null);
+        forearmsAreasButton.setBounds(515, 220, 10, 10);
+        photo1jLabel.add(forearmsAreasButton);
 
 
 //        ----------------------
@@ -325,6 +332,14 @@ public class Atlas extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 bicepsAreas = new BicepsAreas();
                 System.out.println(bicepsAreas.getExercises());
+            }
+        });
+
+        forearmsAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                forearmsAreas = new ForearmsAreas();
+                System.out.println(forearmsAreas.getExercises());
             }
         });
 
