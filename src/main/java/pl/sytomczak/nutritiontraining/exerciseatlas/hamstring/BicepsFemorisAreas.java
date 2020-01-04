@@ -1,14 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.hamstring;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BicepsFemorisAreas implements Exerciseable {
+public class BicepsFemorisAreas extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.DUMBBELL_LEG_CURL_LYING);
         exercises.add(Exercise.LEG_CURL_LYING);

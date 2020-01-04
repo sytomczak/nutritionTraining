@@ -1,14 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.calves;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TibialisAnteriorAreas implements Exerciseable {
+public class TibialisAnteriorAreas extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.CALF_RAISES_ON_LEG_PRESS);
         exercises.add(Exercise.DEADLIFT);

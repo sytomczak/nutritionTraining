@@ -1,14 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PectoralisMajorUpperPart implements Exerciseable {
+public class PectoralisMajorUpperPart extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.SEATED_MACHINE_BENCH_PRESS);
         exercises.add(Exercise.LYING_TRICEPS_EXTENSION_SKULL_CRUSHERS);

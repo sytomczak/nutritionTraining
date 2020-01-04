@@ -1,14 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.rectusabdominismuscle;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RectusAbdominisAreas implements Exerciseable {
+public class RectusAbdominisAreas extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.DEADLIFT);
         exercises.add(Exercise.SQUATS_WITH_A_BARBELL_IN_FRONT);

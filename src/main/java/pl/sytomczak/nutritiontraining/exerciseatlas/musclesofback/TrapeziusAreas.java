@@ -1,15 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.musclesofback;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
-import sun.util.resources.cldr.hi.CalendarData_hi_IN;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrapeziusAreas implements Exerciseable {
+public class TrapeziusAreas extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.BENT_OVER_BARBELL_ROWS_OVERHAND);
         exercises.add(Exercise.BENT_OVER_BARBELL_ROWS_UNDERHAND);

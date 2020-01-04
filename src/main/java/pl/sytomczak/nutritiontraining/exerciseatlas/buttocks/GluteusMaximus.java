@@ -1,13 +1,13 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.buttocks;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.*;
 
-public class GluteusMaximus implements Exerciseable {
+public class GluteusMaximus extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.HIP_LIFTS);
         exercises.add(Exercise.HIP_LIFTS_KNEELING);

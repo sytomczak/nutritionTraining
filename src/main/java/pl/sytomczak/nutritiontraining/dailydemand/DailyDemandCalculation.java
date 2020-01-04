@@ -135,7 +135,7 @@ public class DailyDemandCalculation {
         return burnedKcalInExercises;
     }
 
-    protected double calculateBMR() {
+    private double calculateBMR() {
 
         double BMR = 0;
 

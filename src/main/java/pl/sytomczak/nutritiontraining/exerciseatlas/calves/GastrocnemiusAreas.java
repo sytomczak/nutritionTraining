@@ -1,14 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.calves;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GastrocnemiusAreas implements Exerciseable {
+public class GastrocnemiusAreas extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.SEATED_CALF_RAISES);
         exercises.add(Exercise.DONKEY_CALF_RAISES);

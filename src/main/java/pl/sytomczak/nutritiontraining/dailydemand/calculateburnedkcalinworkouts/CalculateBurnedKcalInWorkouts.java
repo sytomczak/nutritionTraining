@@ -1,8 +1,0 @@
-package pl.sytomczak.nutritiontraining.dailydemand.calculateburnedkcalinworkouts;
-
-import pl.sytomczak.nutritiontraining.dailydemand.intensity.IntensityOfAerobicWorkoutsLevel;
-import pl.sytomczak.nutritiontraining.dailydemand.intensity.IntensityOfStrongWorkoutsLevel;
-
-public interface CalculateBurnedKcalInWorkouts {
-    public double calculateBurnedKcalInWorkouts(IntensityOfStrongWorkoutsLevel intensityOfStrongWorkoutsLevel, IntensityOfAerobicWorkoutsLevel intensityOfAerobicWorkoutsLevel);
-}

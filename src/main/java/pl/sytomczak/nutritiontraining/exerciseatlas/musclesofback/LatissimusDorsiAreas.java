@@ -1,14 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.musclesofback;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LatissimusDorsiAreas implements Exerciseable {
+public class LatissimusDorsiAreas extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.BENT_OVER_BARBELL_ROWS_OVERHAND);
         exercises.add(Exercise.BENT_OVER_SINGLE_DUMBBELL_ROWS);

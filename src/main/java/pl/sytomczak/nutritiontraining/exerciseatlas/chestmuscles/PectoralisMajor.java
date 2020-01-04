@@ -1,15 +1,15 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.chestmuscles;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PectoralisMajor implements Exerciseable {
+public class PectoralisMajor extends PrintableExercise {
 
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.PEC_DEC);
         exercises.add(Exercise.LOW_CABLE_CROSSOVER_FLYS_EXERCISE);

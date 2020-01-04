@@ -1,5 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
+import javafx.scene.layout.Border;
 import pl.sytomczak.nutritiontraining.exerciseatlas.abdominalobliquemuscle.ExternalObliqueAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.biceps.BicepsAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximus;
@@ -24,12 +25,16 @@ import pl.sytomczak.nutritiontraining.exerciseatlas.rectusabdominismuscle.Rectus
 import pl.sytomczak.nutritiontraining.exerciseatlas.triceps.TricepsAreas;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Atlas extends JDialog {
     private JButton closeButton;
     private JPanel bodyJPanel;
     private JLabel photo1jLabel;
+    private JScrollPane exerciseListingScrollPane;
+    private JEditorPane exerciseListingPane;
 
     private GluteusMaximus gluteusMaximus;
     private GluteusMedius gluteusMedius;
@@ -183,7 +188,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gluteusMaximus = new GluteusMaximus();
-                System.out.println(gluteusMaximus.getExercises());
+                exerciseListingPane.setText(gluteusMaximus.getExercises());
             }
         });
 
@@ -191,7 +196,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gluteusMedius = new GluteusMedius();
-                System.out.println(gluteusMedius.getExercises());
+                exerciseListingPane.setText(gluteusMedius.getExercises());
             }
         });
 
@@ -199,7 +204,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gluteusMaximusExternalBottomAreas = new GluteusMaximusExternalBottomAreas();
-                System.out.println(gluteusMaximusExternalBottomAreas.getExercises());
+                exerciseListingPane.setText(gluteusMaximusExternalBottomAreas.getExercises());
             }
         });
 
@@ -207,7 +212,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gluteusMinimus = new GluteusMinimus();
-                System.out.println(gluteusMinimus.getExercises());
+                exerciseListingPane.setText(gluteusMinimus.getExercises());
             }
         });
 
@@ -215,7 +220,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 bicepsFemorisAreas = new BicepsFemorisAreas();
-                System.out.println(bicepsFemorisAreas.getExercises());
+                exerciseListingPane.setText(bicepsFemorisAreas.getExercises());
             }
         });
 
@@ -223,7 +228,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gracilisAreas = new GracilisAreas();
-                System.out.println(gracilisAreas.getExercises());
+                exerciseListingPane.setText(gracilisAreas.getExercises());
             }
         });
 
@@ -231,7 +236,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tensorOfFasciaLataAreas = new TensorOfFasciaLataAreas();
-                System.out.println(tensorOfFasciaLataAreas.getExercises());
+                exerciseListingPane.setText(tensorOfFasciaLataAreas.getExercises());
             }
         });
 
@@ -239,7 +244,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gastrocnemiusAreas = new GastrocnemiusAreas();
-                System.out.println(gastrocnemiusAreas.getExercises());
+                exerciseListingPane.setText(gastrocnemiusAreas.getExercises());
             }
         });
 
@@ -247,7 +252,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tibialisAnteriorAreas = new TibialisAnteriorAreas();
-                System.out.println(tibialisAnteriorAreas.getExercises());
+                exerciseListingPane.setText(tibialisAnteriorAreas.getExercises());
             }
         });
 
@@ -255,7 +260,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 adductorLongusArea = new AdductorLongusArea();
-                System.out.println(adductorLongusArea.getExercises());
+                exerciseListingPane.setText(adductorLongusArea.getExercises());
             }
         });
 
@@ -263,7 +268,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 vastusLateralisAreas = new VastusLateralisAreas();
-                System.out.println(vastusLateralisAreas.getExercises());
+                exerciseListingPane.setText(vastusLateralisAreas.getExercises());
             }
         });
 
@@ -271,7 +276,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 rectusAbdominisAreas = new RectusAbdominisAreas();
-                System.out.println(rectusAbdominisAreas.getExercises());
+                exerciseListingPane.setText(rectusAbdominisAreas.getExercises());
             }
         });
 
@@ -279,7 +284,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 externalObliqueAreas = new ExternalObliqueAreas();
-                System.out.println(externalObliqueAreas.getExercises());
+                exerciseListingPane.setText(externalObliqueAreas.getExercises());
             }
         });
 
@@ -287,7 +292,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 erectorSpinaeAreas = new ErectorSpinaeAreas();
-                System.out.println(erectorSpinaeAreas.getExercises());
+                exerciseListingPane.setText(erectorSpinaeAreas.getExercises());
             }
         });
 
@@ -295,7 +300,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 latissimusDorsiAreas = new LatissimusDorsiAreas();
-                System.out.println(latissimusDorsiAreas.getExercises());
+                exerciseListingPane.setText(latissimusDorsiAreas.getExercises());
             }
         });
 
@@ -303,7 +308,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 trapeziusAreas = new TrapeziusAreas();
-                System.out.println(trapeziusAreas.getExercises());
+                exerciseListingPane.setText(trapeziusAreas.getExercises());
             }
         });
 
@@ -311,7 +316,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pectoralisMajor = new PectoralisMajor();
-                System.out.println(pectoralisMajor.getExercises());
+                exerciseListingPane.setText(pectoralisMajor.getExercises());
             }
         });
 
@@ -319,7 +324,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pectoralisMajorUpperPart = new PectoralisMajorUpperPart();
-                System.out.println(pectoralisMajorUpperPart.getExercises());
+                exerciseListingPane.setText(pectoralisMajorUpperPart.getExercises());
             }
         });
 
@@ -327,7 +332,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 deltoidAreas = new DeltoidAreas();
-                System.out.println(deltoidAreas.getExercises());
+                exerciseListingPane.setText(deltoidAreas.getExercises());
             }
         });
 
@@ -335,7 +340,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 bicepsAreas = new BicepsAreas();
-                System.out.println(bicepsAreas.getExercises());
+                exerciseListingPane.setText(bicepsAreas.getExercises());
             }
         });
 
@@ -343,7 +348,7 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 forearmsAreas = new ForearmsAreas();
-                System.out.println(forearmsAreas.getExercises());
+                exerciseListingPane.setText(forearmsAreas.getExercises());
             }
         });
 
@@ -351,57 +356,8 @@ public class Atlas extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tricepsAreas = new TricepsAreas();
-                System.out.println(tricepsAreas.getExercises());
+                exerciseListingPane.setText(tricepsAreas.getExercises());
             }
         });
-
-        //
-//        JPanel popupPanel = createPopupPanel(gluteusMaximusbButton);
-//        popupPanel.setAlignmentX(100);
-//        popupPanel.setAlignmentY(100);
-
-
-        //    photo1jLabel.setLayout(new OverlayLayout(photo1jLabel));
-        //  photo1jLabel.add(popupPanel);
-
-       // photo1jLabel.add(gluteusMaximusButton);
     }
-//
-//    private static JPanel createPopupPanel(JComponent overlapComponent) {
-//        JPanel popupPanel = new JPanel(new BorderLayout());
-//        popupPanel.setOpaque(false);
-//        popupPanel.setMaximumSize(new Dimension(100, 100));
-//        popupPanel.setBorder(new LineBorder(Color.gray));
-//        popupPanel.setVisible(false);
-//
-//        JLabel label = new JLabel("HI there!");
-//        popupPanel.add(wrapInPanel(label), BorderLayout.CENTER);
-//
-//        JButton popupCloseButton = new JButton("Close");
-//        popupPanel.add(wrapInPanel(popupCloseButton), BorderLayout.SOUTH);
-//
-//        popupCloseButton.addActionListener(e -> {
-//            overlapComponent.setEnabled(true);
-//            popupPanel.setVisible(false);
-//        });
-//
-//        return popupPanel;
-//    }
-//
-//    private static JPanel wrapInPanel(JComponent component) {
-//        JPanel jPanel = new JPanel();
-//        jPanel.setBackground(new Color(50, 210, 250, 150));
-//        jPanel.add(component);
-//        return jPanel;
-//    }
-//
-//
-//    private static JFrame createFrame() {
-//        JFrame frame = new JFrame("OverlayLayout Example");
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setSize(new Dimension(700, 700));
-//        return frame;
-//    }
-//}
-//
 }

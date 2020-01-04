@@ -2,14 +2,14 @@ package pl.sytomczak.nutritiontraining.exerciseatlas.quadriceps;
 
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdductorLongusArea implements Exerciseable {
+public class AdductorLongusArea extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.DEADLIFT);
         exercises.add(Exercise.HACK_SQUATS);

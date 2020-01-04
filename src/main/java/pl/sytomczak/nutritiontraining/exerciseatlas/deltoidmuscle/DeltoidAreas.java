@@ -1,14 +1,14 @@
 package pl.sytomczak.nutritiontraining.exerciseatlas.deltoidmuscle;
 
 import pl.sytomczak.nutritiontraining.exerciseatlas.Exercise;
-import pl.sytomczak.nutritiontraining.exerciseatlas.Exerciseable;
+import pl.sytomczak.nutritiontraining.exerciseatlas.PrintableExercise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DeltoidAreas implements Exerciseable {
+public class DeltoidAreas extends PrintableExercise {
 
-    public List<Exercise> getExercises() {
+    public List<Exercise> getExerciseList() {
         List<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(Exercise.ARNOLD_PRESS);
         exercises.add(Exercise.BENT_OVER_CROSSOVER_LATERAL_RAISES);
