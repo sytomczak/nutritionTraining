@@ -1,6 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
-import org.omg.CORBA.DATA_CONVERSION;
+import javafx.scene.control.TitledPane;
 import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
 import pl.sytomczak.nutritiontraining.dailydemand.Gender;
 import pl.sytomczak.nutritiontraining.dailydemand.intensity.IntensityOfAerobicWorkoutsLevel;
@@ -12,11 +12,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
-public class MainView extends JFrame {
+public class CalculateDailyDemandView extends JFrame {
 
     private JPanel mainPanel;
     private JButton calculateButton;
@@ -49,13 +46,17 @@ public class MainView extends JFrame {
     private JLabel resultTdeejLabell;
     private JLabel bmiJLabel;
     private JTextField bmiTextField;
+    private JButton checkMacroButton;
+    private JPanel checkMacroPanel;
     private JButton bodyButton;
 
     private DailyDemandCalculation dailyDemandCalculation;
 
-    public MainView() {
+    public CalculateDailyDemandView() {
         dailyDemandCalculation = new DailyDemandCalculation();
         setContentPane(mainPanel);
+        mainPanel.setPreferredSize(new Dimension(450,500));
+        setTitle("Calculate Daily Demand");
         getRootPane().setDefaultButton(calculateButton);
 
         calculateButton.addActionListener(new ActionListener() {
@@ -71,16 +72,6 @@ public class MainView extends JFrame {
         dailyActivityComboBox.addActionListener(e -> onSelectDailyActivity());
         intensityOfAerobicWorkoutComboBox.addActionListener(e -> onSelectIntensityOfAerobicWorkout());
         intensityOfStrongWorkoutComboBox1.addActionListener(e -> onSelectIntensityOfStrongWorkout());
-
-        bodyButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Atlas atlasDialog = new Atlas();
-                atlasDialog.pack();
-                atlasDialog.setVisible(true);
-                atlasDialog.setLocationRelativeTo(null);
-            }
-        });
     }
 
     private void onSelectManRadioButton() {
@@ -185,12 +176,5 @@ public class MainView extends JFrame {
             dailyDemandCalculation.setDurationOfOneAerobicWorkout(Integer.parseInt(this.durationOfAerobicWorkoutTextField1.getText()));
             return;
         }
-    }
-
-    public static void main(String[] args) {
-        MainView dialog = new MainView();
-        dialog.pack();
-        dialog.setVisible(true);
-        dialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }

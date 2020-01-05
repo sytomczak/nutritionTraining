@@ -1,6 +1,5 @@
 package pl.sytomczak.nutritiontraining.gui;
 
-import javafx.scene.layout.Border;
 import pl.sytomczak.nutritiontraining.exerciseatlas.abdominalobliquemuscle.ExternalObliqueAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.biceps.BicepsAreas;
 import pl.sytomczak.nutritiontraining.exerciseatlas.buttocks.GluteusMaximus;
@@ -29,7 +28,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Atlas extends JDialog {
+public class AtlasView extends JDialog {
     private JButton closeButton;
     private JPanel bodyJPanel;
     private JLabel photo1jLabel;
@@ -60,9 +59,11 @@ public class Atlas extends JDialog {
     private TricepsAreas tricepsAreas;
 
 
-    public Atlas() {
+    public AtlasView() {
 
         setContentPane(bodyJPanel);
+        setTitle("Atlas");
+        bodyJPanel.setPreferredSize(new Dimension(1000,630));
         photo1jLabel.setIcon((new ImageIcon((getClass().getResource("/body.jpg")))));
         setLocationRelativeTo(getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
