@@ -1,4 +1,4 @@
-package pl.sytomczak.nutritiontraining.gui.calculateDailyDemand;
+package pl.sytomczak.nutritiontraining.gui.calculatedailydemand;
 
 import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
 import pl.sytomczak.nutritiontraining.dailydemand.Gender;

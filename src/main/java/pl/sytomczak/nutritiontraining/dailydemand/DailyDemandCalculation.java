@@ -23,6 +23,8 @@ public class DailyDemandCalculation {
     private IntensityOfStrongWorkoutsLevel intensityOfStrongWorkoutsLevel;
     private IntensityOfAerobicWorkoutsLevel intensityOfAerobicWorkoutsLevel;
 
+    private double dailyDemand;
+
     public CalculationResult calculateDailyDemand() {
         double bmiResult = calculateBmi();
         int demandInKcalResult = (int) dailyDemand();
@@ -296,4 +298,11 @@ public class DailyDemandCalculation {
         this.intensityOfAerobicWorkoutsLevel = intensityOfAerobicWorkoutsLevel;
     }
 
+    public double getDailyDemand() {
+        return dailyDemand;
+    }
+
+    public void setDailyDemand(double dailyDemand) {
+        this.dailyDemand = dailyDemand;
+    }
 }
