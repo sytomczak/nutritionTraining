@@ -1,6 +1,5 @@
-package pl.sytomczak.nutritiontraining.gui;
+package pl.sytomczak.nutritiontraining.gui.calculateDailyDemand;
 
-import javafx.scene.control.TitledPane;
 import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
 import pl.sytomczak.nutritiontraining.dailydemand.Gender;
 import pl.sytomczak.nutritiontraining.dailydemand.intensity.IntensityOfAerobicWorkoutsLevel;
@@ -48,7 +47,6 @@ public class CalculateDailyDemandView extends JFrame {
     private JTextField bmiTextField;
     private JButton checkMacroButton;
     private JPanel checkMacroPanel;
-    private JButton bodyButton;
 
     private DailyDemandCalculation dailyDemandCalculation;
 
@@ -72,6 +70,18 @@ public class CalculateDailyDemandView extends JFrame {
         dailyActivityComboBox.addActionListener(e -> onSelectDailyActivity());
         intensityOfAerobicWorkoutComboBox.addActionListener(e -> onSelectIntensityOfAerobicWorkout());
         intensityOfStrongWorkoutComboBox1.addActionListener(e -> onSelectIntensityOfStrongWorkout());
+
+        checkMacroButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CheckMacroView checkMacroViewButton = new CheckMacroView();
+                checkMacroViewButton.pack();
+                checkMacroViewButton.setVisible(true);
+                checkMacroViewButton.setResizable(false);
+                checkMacroViewButton.setLocationRelativeTo(null);
+            }
+        });
+
     }
 
     private void onSelectManRadioButton() {
