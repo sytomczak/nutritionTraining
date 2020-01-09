@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="pl.sytomczak.nutritiontraining.gui.calculatedailydemand.CalculateDailyDemandView">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="21" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="438" height="684"/>
+    </constraints>
+    <properties>
+      <background color="-1576209"/>
+      <enabled value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="b6354" class="javax.swing.JLabel" binding="genderJLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Gender"/>
+        </properties>
+      </component>
+      <component id="c4f3f" class="javax.swing.JLabel" binding="ageJLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Age"/>
+        </properties>
+      </component>
+      <component id="144e2" class="javax.swing.JLabel" binding="heightJLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Height [cm]"/>
+        </properties>
+      </component>
+      <component id="8feb8" class="javax.swing.JLabel" binding="weightJLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Weight [kg]"/>
+        </properties>
+      </component>
+      <component id="b4850" class="javax.swing.JLabel" binding="physiqueJLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Physique"/>
+        </properties>
+      </component>
+      <component id="3f169" class="javax.swing.JLabel" binding="dailyActivityJLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Daily Activity"/>
+        </properties>
+      </component>
+      <hspacer id="3a457">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="8fcd" class="javax.swing.JLabel" binding="numberOfStrongWorkoutsInWeekJLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Number of strong workouts in week"/>
+        </properties>
+      </component>
+      <component id="7795b" class="javax.swing.JLabel" binding="durationOfStrongWorkoutJLabel">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Duration of strong workout [min.]"/>
+        </properties>
+      </component>
+      <component id="4b749" class="javax.swing.JLabel" binding="intensityOfStrongWorkoutsJLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Intensity"/>
+        </properties>
+      </component>
+      <hspacer id="aef00">
+        <constraints>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="63d88" class="javax.swing.JLabel" binding="numberOfAerobicWorkoutsInWeekJLabel">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Number of aerobic workouts in week"/>
+        </properties>
+      </component>
+      <component id="b90aa" class="javax.swing.JLabel" binding="durationOfAerobicWorkoutJLabel">
+        <constraints>
+          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Duration of aerobic workout [min.]"/>
+        </properties>
+      </component>
+      <component id="c57b7" class="javax.swing.JLabel" binding="intensityOfAerobicWorkoutJLabel">
+        <constraints>
+          <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Intensity"/>
+        </properties>
+      </component>
+      <hspacer id="c0edd">
+        <constraints>
+          <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="10575" class="javax.swing.JLabel" binding="resultTdeejLabell">
+        <constraints>
+          <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Daily Demand [kcal]"/>
+        </properties>
+      </component>
+      <component id="aea4f" class="javax.swing.JTextField" binding="dailyDemandTextField1">
+        <constraints>
+          <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="20"/>
+            <preferred-size width="200" height="20"/>
+            <maximum-size width="150" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <text value="Your daily demand"/>
+        </properties>
+      </component>
+      <hspacer id="fdc5e">
+        <constraints>
+          <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="8fa21" class="javax.swing.JTextField" binding="ageTextField">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="b6a58" class="javax.swing.JRadioButton" binding="womanRadioButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Woman"/>
+        </properties>
+      </component>
+      <component id="da7a8" class="javax.swing.JRadioButton" binding="manRadioButton">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Man"/>
+        </properties>
+      </component>
+      <component id="ae656" class="javax.swing.JTextField" binding="heightTextField">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="2baeb" class="javax.swing.JTextField" binding="weightTextField">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="284e6" class="javax.swing.JComboBox" binding="physiqueComboBox">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="SELECT"/>
+            <item value="Endomorph"/>
+            <item value="Mesomorpg"/>
+            <item value="Ectomorph"/>
+          </model>
+          <toolTipText value="&lt;html&gt;&#10;ENDOMORPH&#10;&lt;br&gt;-Soft and round body&#10;&lt;br&gt;-Gains muscle and fat very easily&#10;&lt;br&gt;-Is generally short&#10;&lt;br&gt;-&quot;Stocky&quot; build&#10;&lt;br&gt;-Round physique&#10;&lt;br&gt;-Finds it hard to lose fat&#10;&lt;br&gt;-Slow metabolism&#10;&lt;br&gt;-Muscles not so well defined&#10;&lt;br&gt;&#10;&lt;br&gt;MESOMORPH&#10;&lt;br&gt;-Athletic&#10;&lt;br&gt;-Generally hard body&#10;&lt;br&gt;-Well defined muscles&#10;&lt;br&gt;-Rectangular shaped body&#10;&lt;br&gt;-Strong&#10;&lt;br&gt;-Gains muscle easily&#10;&lt;br&gt;-Gains fat more easily than ectomorphs&#10;&lt;br&gt;&#10;&lt;br&gt;ECTOMORPH&#10;&lt;br&gt;-Small “delicate” frame and bone structure&#10;&lt;br&gt;-Classic “hardgainer”&#10;&lt;br&gt;-Flat chest&#10;&lt;br&gt;-Small shoulders&#10;&lt;br&gt;-Thin&#10;&lt;br&gt;-Lean muscle mass&#10;&lt;br&gt;-Finds it hard to gain weight&#10;&lt;br&gt;-Fast metabolism&#10;&lt;br&gt;&#10;&lt;/html&gt;"/>
+        </properties>
+      </component>
+      <component id="b46e9" class="javax.swing.JComboBox" binding="dailyActivityComboBox">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="SELECT"/>
+            <item value="Low"/>
+            <item value="Medium"/>
+            <item value="High"/>
+          </model>
+          <toolTipText value="&lt;html&gt;&#10;ENDOMORPH:&#10;&lt;br&gt;Low - 200 kcal&#10;&lt;br&gt;Medium - 300 kcal&#10;&lt;br&gt;High - 400 kcal&#10;&lt;br&gt;&#10;&lt;br&gt;MESOMORPH:&#10;&lt;br&gt;Low - 400 kcal&#10;&lt;br&gt;Medium - 450 kcal&#10;&lt;br&gt;High - 500 kcal&#10;&lt;br&gt;&#10;&lt;br&gt;ECTOMORPH:&#10;&lt;br&gt;Low - 700 kcal&#10;&lt;br&gt;Medium - 800 kcal&#10;&lt;br&gt;High - 900 kcal&#10;&lt;br&gt;&#10;&lt;/html&gt;&#10;"/>
+        </properties>
+      </component>
+      <component id="9a2e3" class="javax.swing.JTextField" binding="numberOfStrongWorkoutsInWeekTextField">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <hspacer id="7c1ef">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="948c9" class="javax.swing.JTextField" binding="durationOfStrongWorkoutTextField">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="c06b" class="javax.swing.JComboBox" binding="intensityOfStrongWorkoutComboBox1">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="SELECT"/>
+            <item value="Low"/>
+            <item value="Medium"/>
+            <item value="High"/>
+          </model>
+        </properties>
+      </component>
+      <hspacer id="937b5">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="60e54" class="javax.swing.JTextField" binding="numberOfAerobicWorkoutsInWeekTextField1">
+        <constraints>
+          <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8c585" class="javax.swing.JTextField" binding="durationOfAerobicWorkoutTextField1">
+        <constraints>
+          <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="bba00" class="javax.swing.JComboBox" binding="intensityOfAerobicWorkoutComboBox">
+        <constraints>
+          <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="SELECT"/>
+            <item value="Low"/>
+            <item value="Medium"/>
+            <item value="High"/>
+          </model>
+        </properties>
+      </component>
+      <hspacer id="ba664">
+        <constraints>
+          <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="8d421" class="javax.swing.JTextField" binding="bmiTextField">
+        <constraints>
+          <grid row="18" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="20"/>
+            <preferred-size width="200" height="20"/>
+            <maximum-size width="150" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <text value="Your BMI"/>
+        </properties>
+      </component>
+      <component id="54e47" class="javax.swing.JLabel" binding="bmiJLabel">
+        <constraints>
+          <grid row="17" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="BMI"/>
+        </properties>
+      </component>
+      <hspacer id="54bc1">
+        <constraints>
+          <grid row="19" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="1fab0" class="javax.swing.JButton" binding="calculateButton">
+        <constraints>
+          <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="120" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Calculate"/>
+        </properties>
+      </component>
+      <grid id="29ce2" binding="checkMacroPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="20" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1576209"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="62532" class="javax.swing.JButton" binding="checkMacroButton">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="130" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Check Your Macro"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="buttonGroup1">
+      <member id="da7a8"/>
+      <member id="b6a58"/>
+    </group>
+  </buttonGroups>
+</form>
