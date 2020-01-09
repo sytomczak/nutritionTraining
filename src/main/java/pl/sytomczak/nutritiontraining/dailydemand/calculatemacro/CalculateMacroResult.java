@@ -5,47 +5,49 @@ import java.util.Objects;
 public class CalculateMacroResult {
     private int fat;
     private int protein;
-    private double carbs;
-    private double calories;
+    private int carbs;
+    private int calories;
 
-    public CalculateMacroResult(double carbs, int protein, int fat, double calories) {
-        this.carbs = carbs;
+    public CalculateMacroResult(int calories, int protein, int fat, int carbs) {
+        this.calories = calories;
         this.protein = protein;
         this.fat = fat;
-        this.calories = calories;
+        this.carbs = carbs;
     }
 
-    public double getCarbs() {
-        return carbs;
-    }
-    public int getFat() {
-        return fat;
-    }
-
-    public double getCalories() {
-    return calories;
+    public int getCalories() {
+        return calories;
     }
 
     public int getProtein() {
         return protein;
     }
 
+    public int getFat() {
+        return fat;
+    }
+
+    public int getCarbs() {
+        return carbs;
+    }
+
+
     @Override
     public String toString() {
         return "CalculationMacroResult{" +
-                "carbs=" + carbs +
-                ", protein=" + protein + "fat=" + fat + "kcal=" + calories +
+                "protein=" + protein + "fat=" + fat + "kcal=" + calories + "carbs=" + carbs +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CalculateMacroResult that = (CalculateMacroResult) o;
-        return fat == that.fat &&
-                protein == that.protein &&
-                Double.compare(that.carbs, carbs) == 0 &&
-                Double.compare(that.calories, calories) == 0;
+        CalculateMacroResult result = (CalculateMacroResult) o;
+        return fat == result.fat &&
+                protein == result.protein &&
+                carbs == result.carbs &&
+                calories == result.calories;
     }
 
     @Override
