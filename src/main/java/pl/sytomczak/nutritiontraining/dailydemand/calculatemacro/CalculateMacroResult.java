@@ -31,6 +31,13 @@ public class CalculateMacroResult {
     }
 
     @Override
+    public String toString() {
+        return "CalculationMacroResult{" +
+                "carbs=" + carbs +
+                ", protein=" + protein + "fat=" + fat + "kcal=" + calories +
+                '}';
+    }
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

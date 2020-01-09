@@ -1,5 +1,7 @@
 package pl.sytomczak.nutritiontraining.gui.calculatedailydemand;
 
+import pl.sytomczak.nutritiontraining.dailydemand.CalculationResult;
+import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
 import pl.sytomczak.nutritiontraining.dailydemand.calculatemacro.CalculateMacro;
 import pl.sytomczak.nutritiontraining.dailydemand.calculatemacro.VariableCaloriesDependingOnWeightChange;
 
@@ -26,8 +28,8 @@ public class CheckMacroView extends JFrame {
 
     private CalculateMacro calculateMacro;
 
-    public CheckMacroView() {
-        calculateMacro = new CalculateMacro();
+    public CheckMacroView(CalculationResult calculationResult) {
+        calculateMacro = new CalculateMacro(calculationResult);
         setContentPane(checkMacroPanel);
         setTitle("Macro");
         getRootPane().setDefaultButton(calculateButton);

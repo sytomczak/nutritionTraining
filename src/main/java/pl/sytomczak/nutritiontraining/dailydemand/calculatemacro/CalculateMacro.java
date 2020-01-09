@@ -1,5 +1,6 @@
 package pl.sytomczak.nutritiontraining.dailydemand.calculatemacro;
 
+import pl.sytomczak.nutritiontraining.dailydemand.CalculationResult;
 import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
 
 public class CalculateMacro {
@@ -10,6 +11,12 @@ public class CalculateMacro {
 
     private DailyDemandCalculation dailyDemandCalculation;
     private DailyDemandCalculation weight;
+    private CalculationResult result;
+
+    public CalculateMacro(CalculationResult calculation) {
+        result = calculation;
+    }
+
 
     public CalculateMacroResult calculationMacro() {
         int proteinResult = calculateDailyProtein();
@@ -20,18 +27,17 @@ public class CalculateMacro {
     }
 
     private double calculateMacro(VariableCaloriesDependingOnWeightChange caloriesDependingOnWeightChange) {
-        dailyDemandCalculation = new DailyDemandCalculation();
         double calculateCalories = 0;
 
         switch (caloriesDependingOnWeightChange) {
             case LOSE:
-                 calculateCalories = dailyDemandCalculation.getDailyDemand() - VariableCaloriesDependingOnWeightChange.LOSE.getNumberOfCaloriesDependingOnWeightChange();
+                 calculateCalories = result.getDemandInKcal() - VariableCaloriesDependingOnWeightChange.LOSE.getNumberOfCaloriesDependingOnWeightChange();
                 break;
             case GAIN:
-                calculateCalories = dailyDemandCalculation.getDailyDemand() + VariableCaloriesDependingOnWeightChange.GAIN.getNumberOfCaloriesDependingOnWeightChange();
+                calculateCalories = result.getDemandInKcal() + VariableCaloriesDependingOnWeightChange.GAIN.getNumberOfCaloriesDependingOnWeightChange();
                 break;
             case KEEP:
-                calculateCalories = dailyDemandCalculation.getDailyDemand() + VariableCaloriesDependingOnWeightChange.KEEP.getNumberOfCaloriesDependingOnWeightChange();
+                calculateCalories = result.getDemandInKcal() + VariableCaloriesDependingOnWeightChange.KEEP.getNumberOfCaloriesDependingOnWeightChange();
                 break;
             default:
                 break;
@@ -40,14 +46,13 @@ public class CalculateMacro {
     }
 
         private int calculateDailyProtein () {
-            weight = new DailyDemandCalculation();
-            protein = 2 * weight.getWeight();
+            protein = 2 * result.getWeight();
             return protein;
 
         }
 
         private int calculateDailyFat () {
-            fat = weight.getWeight();
+            fat = result.getWeight();
             return fat;
 
         }

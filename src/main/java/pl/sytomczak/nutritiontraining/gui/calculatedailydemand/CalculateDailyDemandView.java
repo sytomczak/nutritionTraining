@@ -1,5 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui.calculatedailydemand;
 
+import pl.sytomczak.nutritiontraining.dailydemand.CalculationResult;
 import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
 import pl.sytomczak.nutritiontraining.dailydemand.Gender;
 import pl.sytomczak.nutritiontraining.dailydemand.intensity.IntensityOfAerobicWorkoutsLevel;
@@ -49,6 +50,8 @@ public class CalculateDailyDemandView extends JFrame {
     private JPanel checkMacroPanel;
 
     private DailyDemandCalculation dailyDemandCalculation;
+    private CalculationResult calculationResult;
+
 
     public CalculateDailyDemandView() {
         dailyDemandCalculation = new DailyDemandCalculation();
@@ -74,7 +77,7 @@ public class CalculateDailyDemandView extends JFrame {
         checkMacroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CheckMacroView checkMacroViewButton = new CheckMacroView();
+                CheckMacroView checkMacroViewButton = new CheckMacroView(calculationResult);
                 checkMacroViewButton.pack();
                 checkMacroViewButton.setVisible(true);
                 checkMacroViewButton.setResizable(false);
@@ -161,8 +164,10 @@ public class CalculateDailyDemandView extends JFrame {
 
     private void onCalculate() {
         setFieldValues();
-        this.dailyDemandTextField1.setText(String.valueOf(dailyDemandCalculation.calculateDailyDemand().getDemandInKcal()));
-        this.bmiTextField.setText(String.valueOf(dailyDemandCalculation.calculateDailyDemand().getBmi()));
+        calculationResult = dailyDemandCalculation.calculateDailyDemand();
+        this.dailyDemandTextField1.setText(String.valueOf(calculationResult.getDemandInKcal()));
+        this.bmiTextField.setText(String.valueOf(calculationResult.getBmi()));
+
     }
 
 
