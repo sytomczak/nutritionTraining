@@ -52,6 +52,7 @@ public class CalculateDailyDemandView extends JFrame {
     private DailyDemandCalculation dailyDemandCalculation;
     private CalculationResult calculationResult;
 
+
     public CalculateDailyDemandView() {
         dailyDemandCalculation = new DailyDemandCalculation();
         setContentPane(mainPanel);
@@ -166,6 +167,7 @@ public class CalculateDailyDemandView extends JFrame {
         calculationResult = dailyDemandCalculation.calculateDailyDemand();
         this.dailyDemandTextField1.setText(String.valueOf(calculationResult.getDemandInKcal()));
         this.bmiTextField.setText(String.valueOf(calculationResult.getBmi()));
+
     }
 
 

@@ -17,6 +17,7 @@ public class CalculateMacro {
         result = calculation;
     }
 
+
     public CalculateMacroResult calculationMacro() {
         int proteinResult = calculateDailyProtein();
         double carbsResult = calculateDailyCarbs();

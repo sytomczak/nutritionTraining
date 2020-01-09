@@ -30,6 +30,7 @@ public class DailyDemandCalculation {
         int demandInKcalResult = (int) dailyDemand();
         int weight = getWeight();
         return new CalculationResult(bmiResult, demandInKcalResult, weight);
+
     }
 
     private double calculateDailyActivity(Physique physique) {
