@@ -11,6 +11,7 @@ public class CalculationResult {
         this.bmi = bmi;
         this.demandInKcal = demandInKcal;
         this.weight = weight;
+
     }
 
     public double getBmi() {
@@ -37,7 +38,8 @@ public class CalculationResult {
         if (o == null || getClass() != o.getClass()) return false;
         CalculationResult result = (CalculationResult) o;
         return Double.compare(result.bmi, bmi) == 0 &&
-                demandInKcal == result.demandInKcal &&
+
+          demandInKcal == result.demandInKcal &&
                 weight == result.weight;
     }
 
