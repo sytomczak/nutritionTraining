@@ -46,12 +46,12 @@ public class CalculateMacro {
     }
 
     private double calculateDailyProtein() {
-   //     if (VariableCaloriesDependingOnWeightChange.LOSE.equals(caloriesDependingOnWeightChange)) {
-        //    protein = 2.5 * result.getWeight();
-    //    } else if (VariableCaloriesDependingOnWeightChange.GAIN.equals(caloriesDependingOnWeightChange)) {
-       //     protein = 2.2 * result.getWeight();
-       // } else
-        protein =  2 * result.getWeight();
+        if (VariableCaloriesDependingOnWeightChange.LOSE.equals(caloriesDependingOnWeightChange)) {
+            protein = 2.3 * result.getWeight();
+        } else if (VariableCaloriesDependingOnWeightChange.GAIN.equals(caloriesDependingOnWeightChange)) {
+            protein = 2.1 * result.getWeight();
+        } else
+            protein = 2 * result.getWeight();
         return Math.round(protein * 100.0) / 100.0;
     }
 
@@ -64,9 +64,7 @@ public class CalculateMacro {
     private double calculateDailyCarbs() {
         double kcal = 0;
         double calculateKcal = calculateMacro(caloriesDependingOnWeightChange);
-
-        //za 1 kliknieciem w keep nie oblicza od razu tluszczy dlatego carbsy sa na poczatku obliczone bez odjecia fat przy 1 klinieciu tak ejst wszedzie
-        kcal  = calculateKcal - ((fat * 9) + (protein * 4));
+        kcal = calculateKcal - ((fat * 9) + (protein * 4));
         carbs = kcal / 4;
 
         return Math.round(carbs * 100.0) / 100.0;
