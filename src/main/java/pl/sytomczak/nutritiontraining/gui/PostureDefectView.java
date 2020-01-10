@@ -1,15 +1,23 @@
 package pl.sytomczak.nutritiontraining.gui;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class PostureDefectView extends JDialog {
-    private JPanel contentPane;
+    private JPanel postureJPanel;
+    private JRadioButton scoliosisRadioButton;
+    private JRadioButton kyphosisTreatmentRadioButton;
+    private JRadioButton lordosisTreatmentRadioButton;
+    private JLabel postureJLabel;
     private JButton buttonOK;
     private JButton buttonCancel;
 
     public PostureDefectView() {
-        setContentPane(contentPane);
+        setContentPane(postureJPanel);
+        setTitle("Posture Defect");
+        postureJPanel.setPreferredSize(new Dimension(736, 491));
+        postureJLabel.setIcon(new ImageIcon(getClass().getResource("postawa.jog")));
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
@@ -25,7 +33,6 @@ public class PostureDefectView extends JDialog {
             }
         });
 
-        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -33,8 +40,7 @@ public class PostureDefectView extends JDialog {
             }
         });
 
-        // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
+        postureJPanel.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
             }
@@ -42,12 +48,10 @@ public class PostureDefectView extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
         dispose();
     }
 
     private void onCancel() {
-        // add your code here if necessary
         dispose();
     }
 
