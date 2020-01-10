@@ -35,7 +35,7 @@ public class CalculateMacroResult {
     @Override
     public String toString() {
         return "CalculationMacroResult{" +
-                "protein=" + protein + "fat=" + fat + "kcal=" + calories + "carbs=" + carbs +
+                "protein=" + protein + ", fat=" + fat + ", kcal=" + calories + ", carbs=" + carbs +
                 '}';
     }
 

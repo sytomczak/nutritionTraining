@@ -63,7 +63,7 @@ public class AtlasView extends JDialog {
 
         setContentPane(bodyJPanel);
         setTitle("Atlas");
-        bodyJPanel.setPreferredSize(new Dimension(1000,630));
+        bodyJPanel.setPreferredSize(new Dimension(1000,645));
         photo1jLabel.setIcon((new ImageIcon((getClass().getResource("/body.jpg")))));
         setLocationRelativeTo(getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);

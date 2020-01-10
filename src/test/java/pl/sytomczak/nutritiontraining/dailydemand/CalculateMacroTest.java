@@ -23,23 +23,21 @@ class CalculateMacroTest {
 
     @ParameterizedTest
     @MethodSource("provideDateForCalculateMacro")
-    public void shouldCalculateMacro(CalculateMacroResult expectedResult, VariableCaloriesDependingOnWeightChange caloriesDependingOnChoice, DailyDemandCalculation weight, DailyDemandCalculation calories, int protein, int fat, double carbs) {
+    public void shouldCalculateMacro(CalculateMacroResult expectedResult, VariableCaloriesDependingOnWeightChange caloriesDependingOnChoice, int weight) {
 
         calculateMacro.setCaloriesDependingOnWeightChange(caloriesDependingOnChoice);
         calculateMacro.setWeight(weight);
-        calculateMacro.setDailyDemandCalculation(calories);
-        calculateMacro.setCarbs(carbs);
-        calculateMacro.setFat(fat);
-        calculateMacro.setProtein(protein);
 
         CalculateMacroResult result = calculateMacro.calculationMacro();
         Assertions.assertEquals(expectedResult, result);
     }
 
+
     public static Stream<Arguments> provideDateForCalculateMacro() {
         return Stream.of(
-                Arguments.of(new CalculateMacroResult(237, 120, 60, 1968), VariableCaloriesDependingOnWeightChange.KEEP, 60)
-        );
+                Arguments.of(new CalculateMacroResult(1968, 120, 60, 237), VariableCaloriesDependingOnWeightChange.KEEP, 60),
+                Arguments.of(new CalculateMacroResult(1893, 142, 72,118), VariableCaloriesDependingOnWeightChange.LOSE, 62)
+                );
     }
 }
 

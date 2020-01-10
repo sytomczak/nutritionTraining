@@ -10,7 +10,7 @@ public class CalculateMacro {
     private VariableCaloriesDependingOnWeightChange caloriesDependingOnWeightChange;
 
     private DailyDemandCalculation dailyDemandCalculation;
-    private DailyDemandCalculation weight;
+    private int weight;
     private CalculationResult result;
 
     public CalculateMacro(CalculationResult calculation) {
@@ -52,6 +52,7 @@ public class CalculateMacro {
             protein = 2.1 * result.getWeight();
         } else
             protein = 2 * result.getWeight();
+
         return Math.round(protein * 100.0) / 100.0;
     }
 
@@ -110,11 +111,11 @@ public class CalculateMacro {
         this.dailyDemandCalculation = dailyDemandCalculation;
     }
 
-    public DailyDemandCalculation getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(DailyDemandCalculation weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
