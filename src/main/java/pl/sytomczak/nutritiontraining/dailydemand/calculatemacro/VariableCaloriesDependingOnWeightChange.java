@@ -1,7 +1,7 @@
 package pl.sytomczak.nutritiontraining.dailydemand.calculatemacro;
 
 public enum VariableCaloriesDependingOnWeightChange {
-    LOSE(200),
+    LOSE(100),
     KEEP(0),
     GAIN(200);
 

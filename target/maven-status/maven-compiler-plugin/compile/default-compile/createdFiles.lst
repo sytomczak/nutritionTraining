@@ -15,7 +15,6 @@ pl/sytomczak/nutritiontraining/gui/AtlasView$2.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$11.class
 pl/sytomczak/nutritiontraining/gui/MenuView$1.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$21.class
-pl/sytomczak/nutritiontraining/gui/calculatedailydemand/CalculateDailyDemandView$6.class
 pl/sytomczak/nutritiontraining/dailydemand/intensity/IntensityOfStrongWorkoutsLevel.class
 pl/sytomczak/nutritiontraining/dailydemand/DailyDemandCalculation$1.class
 pl/sytomczak/nutritiontraining/gui/MenuView.class
@@ -27,17 +26,14 @@ pl/sytomczak/nutritiontraining/gui/AtlasView$13.class
 pl/sytomczak/nutritiontraining/exerciseatlas/Exercise.class
 pl/sytomczak/nutritiontraining/exerciseatlas/triceps/TricepsAreas.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$9.class
-pl/sytomczak/nutritiontraining/gui/calculatedailydemand/CalculateDailyDemandView$8.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$6.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$10.class
 pl/sytomczak/nutritiontraining/exerciseatlas/musclesofback/LatissimusDorsiAreas.class
 pl/sytomczak/nutritiontraining/gui/calculatedailydemand/CalculateDailyDemandView$2.class
-pl/sytomczak/nutritiontraining/gui/calculatedailydemand/CalculateDailyDemandView$5.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$12.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$22.class
 pl/sytomczak/nutritiontraining/gui/MenuView$2.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$3.class
-pl/sytomczak/nutritiontraining/gui/calculatedailydemand/CalculateDailyDemandView$4.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$19.class
 pl/sytomczak/nutritiontraining/dailydemand/intensity/EpocInAerobicWorkouts.class
 pl/sytomczak/nutritiontraining/exerciseatlas/hamstring/BicepsFemorisAreas.class
@@ -66,7 +62,6 @@ pl/sytomczak/nutritiontraining/dailydemand/intensity/IntensityOfAerobicWorkoutsL
 pl/sytomczak/nutritiontraining/exerciseatlas/buttocks/GluteusMaximus.class
 pl/sytomczak/nutritiontraining/exerciseatlas/forearms/ForearmsAreas.class
 pl/sytomczak/nutritiontraining/gui/AtlasView$1.class
-pl/sytomczak/nutritiontraining/gui/calculatedailydemand/CalculateDailyDemandView$7.class
 pl/sytomczak/nutritiontraining/dailydemand/calculatemacro/CalculateMacro.class
 pl/sytomczak/nutritiontraining/exerciseatlas/quadriceps/AdductorLongusArea.class
 pl/sytomczak/nutritiontraining/exerciseatlas/calves/TibialisAnteriorAreas.class

@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="360" width="984" height="659"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-1576209"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="c3ef1" class="javax.swing.JButton" binding="closeButton">
