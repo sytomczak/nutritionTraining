@@ -35,6 +35,17 @@ public class MenuView extends JDialog {
             }
         });
 
+        postureDefectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PostureDefectView postureDefectView = new PostureDefectView();
+                postureDefectView.pack();
+                postureDefectView.setVisible(true);
+                postureDefectView.setResizable(false);
+                postureDefectView.setLocationRelativeTo(null);
+            }
+        });
+
         atlasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
