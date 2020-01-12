@@ -1,4 +1,4 @@
-package pl.sytomczak.nutritiontraining.gui;
+package pl.sytomczak.nutritiontraining.gui.posturedefect;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,7 +34,22 @@ public class PostureDefectView extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+
+        //przyciski trzeba jakos dodac do  klas rozszerzających treatmentView
+        kyphosisTreatmentRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PostureDefectTreatmentView postureDefectTreatmentView = new PostureDefectTreatmentView();
+                postureDefectTreatmentView.pack();
+                postureDefectTreatmentView.setVisible(true);
+                postureDefectTreatmentView.setResizable(false);
+                postureDefectTreatmentView.setLocationRelativeTo(null);
+
+            }
+        });
     }
+
 
     private void onCancel() {
         dispose();

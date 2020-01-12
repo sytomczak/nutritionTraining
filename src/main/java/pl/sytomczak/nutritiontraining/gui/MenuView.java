@@ -1,6 +1,7 @@
 package pl.sytomczak.nutritiontraining.gui;
 
 import pl.sytomczak.nutritiontraining.gui.calculatedailydemand.CalculateDailyDemandView;
+import pl.sytomczak.nutritiontraining.gui.posturedefect.PostureDefectView;
 
 import javax.swing.*;
 import java.awt.*;
