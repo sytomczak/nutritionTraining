@@ -10,6 +10,8 @@ public class MenuView extends JDialog {
     private JPanel menuPanel;
     private JButton calculateDailyDemandButton;
     private JButton atlasButton;
+    private JButton postureDefectButton;
+    private JButton stretchingButton;
 
     public MenuView() {
         setContentPane(menuPanel);
