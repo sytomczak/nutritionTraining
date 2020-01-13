@@ -11,8 +11,6 @@ public abstract class PrintableTreatment {
     public final String getTreatments() {
         StringBuilder htmlTreatmentList = new StringBuilder();
         htmlTreatmentList.append("<html>");
-
-        htmlTreatmentList.append("<html>");
         htmlTreatmentList.append("<body>");
 
         getTreatmentList().forEach(e -> {

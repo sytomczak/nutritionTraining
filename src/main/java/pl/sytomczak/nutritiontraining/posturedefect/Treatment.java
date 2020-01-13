@@ -1,7 +1,10 @@
 package pl.sytomczak.nutritiontraining.posturedefect;
 
 public enum Treatment {
-    DELETE_THIS();
+
+    LORDOSIS(),
+    SCOLIOSIS(),
+    KYPHOSIS();
 
     @Override
     public String toString() {

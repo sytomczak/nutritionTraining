@@ -7,7 +7,7 @@ public class Kyphosis extends PrintableTreatment {
 
     public List<Treatment> getTreatmentList() {
         List<Treatment> treatments = new ArrayList<Treatment>();
-        treatments.add(Treatment.DELETE_THIS);
+        treatments.add(Treatment.KYPHOSIS);
 
         return treatments;
     }

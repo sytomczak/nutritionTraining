@@ -44,6 +44,7 @@
           <component id="7901c" class="javax.swing.JEditorPane" binding="exerciseListingPane">
             <constraints/>
             <properties>
+              <background color="-1576209"/>
               <contentType value="text/html"/>
               <editable value="false"/>
               <enabled value="true"/>
