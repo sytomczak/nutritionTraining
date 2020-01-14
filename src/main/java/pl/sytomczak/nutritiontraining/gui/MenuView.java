@@ -1,5 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
+import pl.sytomczak.nutritiontraining.Clock.Clock;
 import pl.sytomczak.nutritiontraining.gui.calculatedailydemand.CalculateDailyDemandView;
 import pl.sytomczak.nutritiontraining.gui.posturedefect.PostureDefectView;
 
@@ -13,11 +14,13 @@ public class MenuView extends JDialog {
     private JButton atlasButton;
     private JButton postureDefectButton;
     private JButton stretchingButton;
+    private JEditorPane clockPanel;
+    private Clock clock;
 
     public MenuView() {
         setContentPane(menuPanel);
         setTitle("Nutrition & Training");
-        menuPanel.setPreferredSize(new Dimension(500, 300));
+        menuPanel.setPreferredSize(new Dimension(500, 400));
         getRootPane().setDefaultButton(calculateDailyDemandButton);
 
         menuPanel.registerKeyboardAction(new ActionListener() {
@@ -25,6 +28,9 @@ public class MenuView extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+//        clock = new Clock();
+//        clockPanel.setText(clock.clock());
 
         calculateDailyDemandButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
