@@ -13,7 +13,7 @@ public class Clock {
         Thread thread = new Thread() {
             public void run() {
                 while (true) {
-                    DateFormat calendar = new SimpleDateFormat("hh : mm : ss aa");
+                    DateFormat calendar = new SimpleDateFormat("HH : mm : ss aa");
 
                     String data = calendar.format(new Date()).toString();
 

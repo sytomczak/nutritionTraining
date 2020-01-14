@@ -85,7 +85,7 @@ public class MenuView extends JDialog {
 
             public void run() {
                 while (true) {
-                    DateFormat calendar = new SimpleDateFormat("hh : mm : ss aa");
+                    DateFormat calendar = new SimpleDateFormat("HH : mm : ss");
 
                     String data = calendar.format(new Date()).toString();
                     clockPanel.setText(data);
