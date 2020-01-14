@@ -1,12 +1,14 @@
 package pl.sytomczak.nutritiontraining.gui;
 
-import pl.sytomczak.nutritiontraining.Clock.Clock;
 import pl.sytomczak.nutritiontraining.gui.calculatedailydemand.CalculateDailyDemandView;
 import pl.sytomczak.nutritiontraining.gui.posturedefect.PostureDefectView;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MenuView extends JDialog {
     private JPanel menuPanel;
@@ -15,7 +17,6 @@ public class MenuView extends JDialog {
     private JButton postureDefectButton;
     private JButton stretchingButton;
     private JEditorPane clockPanel;
-    private Clock clock;
 
     public MenuView() {
         setContentPane(menuPanel);
@@ -28,9 +29,6 @@ public class MenuView extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
-
-//        clock = new Clock();
-//        clockPanel.setText(clock.clock());
 
         calculateDailyDemandButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -65,6 +63,8 @@ public class MenuView extends JDialog {
 
             }
         });
+
+        clock();
     }
 
     private void onCancel() {
@@ -78,5 +78,26 @@ public class MenuView extends JDialog {
         menuView.setVisible(true);
         menuView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         menuView.setLocationRelativeTo(null);
+    }
+
+    public void clock() {
+        Thread thread = new Thread() {
+
+            public void run() {
+                while (true) {
+                    DateFormat calendar = new SimpleDateFormat("hh : mm : ss aa");
+
+                    String data = calendar.format(new Date()).toString();
+                    clockPanel.setText(data);
+
+                    try {
+                        sleep(1);
+                    } catch (Exception ex) {
+                        ex.fillInStackTrace();
+                    }
+                }
+            }
+        };
+        thread.start();
     }
 }
