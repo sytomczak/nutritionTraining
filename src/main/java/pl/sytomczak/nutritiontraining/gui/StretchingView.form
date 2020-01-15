@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="pl.sytomczak.nutritiontraining.gui.StretchingView">
+  <grid id="cbd77" binding="contentPane" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="17" y="33" width="1265" height="622"/>
+    </constraints>
+    <properties>
+      <background color="-1576209"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="e3588" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="920" height="497"/>
+            <preferred-size width="920" height="497"/>
+            <maximum-size width="920" height="497"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1576209"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="c074" class="javax.swing.JLabel" binding="photoLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="920" height="497"/>
+                <preferred-size width="920" height="497"/>
+                <maximum-size width="920" height="497"/>
+              </grid>
+            </constraints>
+            <properties>
+              <icon value="stre.jpg"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="201ff">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="f4069" class="javax.swing.JEditorPane" binding="stretchPanel">
+            <constraints/>
+            <properties>
+              <background color="-1576209"/>
+              <editable value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="376b5" class="javax.swing.JRadioButton" binding="fullBodyStretchingButton">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="false"/>
+          <text value="Full Body Stretching"/>
+        </properties>
+      </component>
+      <component id="15a86" class="javax.swing.JRadioButton" binding="stretchingIndividualMuscleButton">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="false"/>
+          <text value="Stretching Individual Muscles"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="strechingButtons">
+      <member id="376b5"/>
+      <member id="15a86"/>
+    </group>
+  </buttonGroups>
+</form>
