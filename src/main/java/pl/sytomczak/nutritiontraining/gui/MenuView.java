@@ -64,6 +64,18 @@ public class MenuView extends JDialog {
             }
         });
 
+        stretchingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    StretchingView stretchingView = new StretchingView();
+                    stretchingView.pack();
+                    stretchingView.setResizable(false);
+                    stretchingView.setVisible(true);
+                    stretchingView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                    stretchingView.setLocationRelativeTo(null);
+                }
+        });
+
         clock();
     }
 

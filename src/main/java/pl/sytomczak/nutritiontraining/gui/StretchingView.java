@@ -21,12 +21,4 @@ public class StretchingView extends JDialog {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
-    public static void main(String[] args) {
-        StretchingView dialog = new StretchingView();
-        dialog.pack();
-        dialog.setResizable(false);
-        dialog.setVisible(true);
-        dialog.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        dialog.setLocationRelativeTo(null);
-    }
 }
