@@ -48,13 +48,20 @@
           <enabled value="true"/>
           <hideActionText value="false"/>
           <text value="Full Body Stretching"/>
+          <toolTipText value="&lt;html&gt;&#10;&lt;head&gt;&#10;&lt;title&gt;test&lt;/title&gt;&#10;&lt;/head&gt;&#10;&#10;&lt;body&gt;&#10;&lt;H3&gt;&#10;&lt;A href=&quot;http://www.daniweb.com/&quot; /&gt; http://www.daniweb.com/ &lt;/A&gt;&#10;&#10;&lt;H3&gt;&#10;&lt;A href=&quot;http://www.onet.pl/&quot; /&gt; http://www.onet.pl/ &lt;/A&gt;&#10;&#10;&lt;/body&gt;&#10;&lt;/html&gt;"/>
         </properties>
       </component>
       <scrollpane id="201ff">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="90" height="500"/>
+            <preferred-size width="90" height="500"/>
+            <maximum-size width="90" height="500"/>
+          </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-1576209"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="f4069" class="javax.swing.JEditorPane" binding="stretchPanel">

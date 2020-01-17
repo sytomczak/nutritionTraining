@@ -1,11 +1,5 @@
 package pl.sytomczak.nutritiontraining.stretching;
 
-
-import java.awt.*;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-
 public enum Stretching {
 
     TIME_45_MIN("\n"+ "https://www.youtube.com/watch?v=GLy2rYHwUqY" + "  " + "https://www.youtube.com/watch?v=H5gopfa7zxs" + "  " + "https://www.youtube.com/watch?v=ALO4udhcXuk" + "  " + "https://www.youtube.com/watch?v=l59RmHmQcGc"),
@@ -18,34 +12,17 @@ public enum Stretching {
     TIME_10_MIN("https://www.youtube.com/watch?v=KJaWIBg15n0" + "  " + "https://www.youtube.com/watch?v=sTxC3J3gQEU" + "  " + "https://www.youtube.com/watch?v=OIww1jSfnsM" + "  " + "https://www.youtube.com/watch?v=kKeBjBBUQyY"),
     TIME_5_MIN("https://www.youtube.com/watch?v=2L2lnxIcNmo" + "  " + "https://www.youtube.com/watch?v=6AgSw1QFltw" + "  " + "https://www.youtube.com/watch?v=KmwkMPnzL40" + "  " + "https://www.youtube.com/watch?v=ep0ABNIrwtA" + "  " + "https://www.youtube.com/watch?v=4zBnM_uozXM"),
 
-    BICEPS_BICEPS("https://www.youtube.com/watch?v=GLy2rYHwUqY");
+    BICEPS("<a href='https://www.youtube.com/watch?v=_e1hQUxTAHc'>" + " Link 1, " + "<a href='https://www.youtube.com/watch?v=TuS_ZnOkg3k'>" + "  Link 2, " + "<a href='https://www.youtube.com/watch?v=VW-I2vNdZag'>" + "Link 3");
 
+//TODO:podzielic na poszczegolne enumy partie czy bez sensu?
 
     private String filmInYouTube;
 
-    Stretching(String filmInYouTube) {this.filmInYouTube = filmInYouTube;
-//        try {
-//
-//            Desktop.getDesktop().browse(new URI(filmInYouTube));
-//
-//        } catch (IOException | URISyntaxException e1) {
-//            e1.printStackTrace();
-//        }
+    Stretching(String filmInYouTube) {
+        this.filmInYouTube = filmInYouTube;
     }
+
     public String getFilmInYouTube() {
         return filmInYouTube;}
-
-
-    @Override
-    public String toString() {
-        return convertToHumanReadable(this.name());
-    }
-
-    private String convertToHumanReadable(String name) {
-        name = name.replace('_',  ' ');
-        name = name.toLowerCase();
-        name = name.substring(0, 1).toUpperCase()+name.substring(1);
-        return name ;
-    }
 
 }
