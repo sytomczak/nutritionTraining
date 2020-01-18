@@ -26,7 +26,7 @@ public class PostureDefectView extends JDialog {
     public PostureDefectView() {
         setContentPane(postureJPanel);
         setTitle("Posture Defect");
-        postureJPanel.setPreferredSize(new Dimension(775, 700)); //560
+        postureJPanel.setPreferredSize(new Dimension(775, 560));
         postureJLabel.setIcon(new ImageIcon(getClass().getResource("/postawa.jpg")));
         setLocationRelativeTo(getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
