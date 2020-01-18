@@ -15,10 +15,12 @@ class CalculateMacroTest {
 
     private CalculateMacro calculateMacro;
 
+
     @ParameterizedTest
     @MethodSource("provideDateForCalculateMacro")
     public void shouldCalculateMacro(CalculateMacroResult expectedResult, VariableCaloriesDependingOnWeightChange caloriesDependingOnChoice, int weight) {
         calculateMacro = new CalculateMacro(new CalculationResult(23.44, 1834,60));
+        calculateMacro = new CalculateMacro(new CalculationResult(28.73, 2854,90));
 
         calculateMacro.setCaloriesDependingOnWeightChange(caloriesDependingOnChoice);
         calculateMacro.setWeight(weight);
@@ -31,8 +33,8 @@ class CalculateMacroTest {
     public static Stream<Arguments> provideDateForCalculateMacro() {
         return Stream.of(
 //                Arguments.of(new CalculateMacroResult(1968, 120, 60, 237), VariableCaloriesDependingOnWeightChange.KEEP, 60),
-//                Arguments.of(new CalculateMacroResult(1893, 142, 72,118), VariableCaloriesDependingOnWeightChange.LOSE, 62),
-                Arguments.of(new CalculateMacroResult(1834,120, 70,181), VariableCaloriesDependingOnWeightChange.KEEP, 60)
+                Arguments.of(new CalculateMacroResult(1834,120, 70,181), VariableCaloriesDependingOnWeightChange.KEEP, 60),
+                Arguments.of(new CalculateMacroResult(3054, 189, 100,349), VariableCaloriesDependingOnWeightChange.GAIN, 90)
 
         );
     }

@@ -34,11 +34,11 @@ public class StretchingView extends JDialog {
     }
 
     private void onSelectFullBodyButton() {
-        stretchPanel.setText("Time 5 min: " + " -> " + Stretching.TIME_5_MIN.getFilmInYouTube() + "\n" + ("Time 10 min: " + " -> " + Stretching.TIME_10_MIN.getFilmInYouTube())
-                + "\n" + ("Time 15 min: " + " -> " + Stretching.TIME_15_MIN.getFilmInYouTube()) + "\n" + ("Time 20 min: " + " -> " + Stretching.TIME_20_MIN.getFilmInYouTube())
-                + "\n" + ("Time 25 min: " + " -> " + Stretching.TIME_25_MIN.getFilmInYouTube()) + "\n" + ("Time 30 min: " + " -> " + Stretching.TIME_30_MIN.getFilmInYouTube())
-                + "\n" + ("Time 35 min: " + " -> " + Stretching.TIME_35_MIN.getFilmInYouTube()) + "\n" + ("Time 40 min: " + " -> " + Stretching.TIME_40_MIN.getFilmInYouTube())
-                + "\n" + ("Time 45 min: " + " -> " + Stretching.TIME_45_MIN.getFilmInYouTube()));
+        stretchPanel.setText("Time 5 min: " + Stretching.TIME_5_MIN.getFilmInYouTube() + "\n" + ("Time 10 min: " + Stretching.TIME_10_MIN.getFilmInYouTube())
+                + "\n" + ("Time 15 min: " + Stretching.TIME_15_MIN.getFilmInYouTube()) + "\n" + ("Time 20 min: " + Stretching.TIME_20_MIN.getFilmInYouTube())
+                + "\n" + ("Time 25 min: " + Stretching.TIME_25_MIN.getFilmInYouTube()) + "\n" + ("Time 30 min: " + Stretching.TIME_30_MIN.getFilmInYouTube())
+                + "\n" + ("Time 35 min: " + Stretching.TIME_35_MIN.getFilmInYouTube()) + "\n" + ("Time 40 min: " + Stretching.TIME_40_MIN.getFilmInYouTube())
+                + "\n" + ("Time 45 min: " + Stretching.TIME_45_MIN.getFilmInYouTube()));
         openLink();
 
 

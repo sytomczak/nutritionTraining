@@ -48,7 +48,7 @@
           <enabled value="true"/>
           <hideActionText value="false"/>
           <text value="Full Body Stretching"/>
-          <toolTipText value="&lt;html&gt;&#10;&lt;head&gt;&#10;&lt;title&gt;test&lt;/title&gt;&#10;&lt;/head&gt;&#10;&#10;&lt;body&gt;&#10;&lt;H3&gt;&#10;&lt;A href=&quot;http://www.daniweb.com/&quot; /&gt; http://www.daniweb.com/ &lt;/A&gt;&#10;&#10;&lt;H3&gt;&#10;&lt;A href=&quot;http://www.onet.pl/&quot; /&gt; http://www.onet.pl/ &lt;/A&gt;&#10;&#10;&lt;/body&gt;&#10;&lt;/html&gt;"/>
+          <toolTipText value=""/>
         </properties>
       </component>
       <scrollpane id="201ff">
