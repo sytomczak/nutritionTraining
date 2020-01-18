@@ -47,8 +47,8 @@ public class StretchingView extends JDialog {
     private void individualStretchingMusclesButtons() {
         JButton bicepsAreasButton = new JButton();
         photoLabel.setLayout(null);
-        bicepsAreasButton.setBackground(Color.RED);
-        bicepsAreasButton.setBounds(100, 100, 50, 50);
+        bicepsAreasButton.setBackground(Color.red);
+        bicepsAreasButton.setBounds(623, 113, 10, 10);
         photoLabel.add(bicepsAreasButton);
 
         bicepsAreasButton.addActionListener(new ActionListener() {
