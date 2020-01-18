@@ -1,5 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
+import pl.sytomczak.nutritiontraining.clock.Clock;
 import pl.sytomczak.nutritiontraining.gui.calculatedailydemand.CalculateDailyDemandView;
 import pl.sytomczak.nutritiontraining.gui.posturedefect.PostureDefectView;
 
@@ -10,7 +11,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MenuView extends JDialog {
+public class MenuView extends JFrame {
     private JPanel menuPanel;
     private JButton calculateDailyDemandButton;
     private JButton atlasButton;
@@ -76,7 +77,7 @@ public class MenuView extends JDialog {
                 }
         });
 
-        clock();
+        Clock.runClock(clockPanel);
     }
 
     private void onCancel() {
@@ -90,26 +91,5 @@ public class MenuView extends JDialog {
         menuView.setVisible(true);
         menuView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         menuView.setLocationRelativeTo(null);
-    }
-
-    public void clock() {
-        Thread thread = new Thread() {
-
-            public void run() {
-                while (true) {
-                    DateFormat calendar = new SimpleDateFormat("HH : mm : ss");
-
-                    String data = calendar.format(new Date()).toString();
-                    clockPanel.setText(data);
-
-                    try {
-                        sleep(1);
-                    } catch (Exception ex) {
-                        ex.fillInStackTrace();
-                    }
-                }
-            }
-        };
-        thread.start();
     }
 }

@@ -1,21 +1,21 @@
 package pl.sytomczak.nutritiontraining.clock;
 
+import javax.swing.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Clock {
 
-    private String data;
-
-    public String clock() {
-
+    public static void runClock(JEditorPane clockPanel) {
         Thread thread = new Thread() {
+
             public void run() {
                 while (true) {
-                    DateFormat calendar = new SimpleDateFormat("HH : mm : ss aa");
+                    DateFormat calendar = new SimpleDateFormat("HH : mm : ss");
 
                     String data = calendar.format(new Date()).toString();
+                    clockPanel.setText(data);
 
                     try {
                         sleep(1);
@@ -26,8 +26,6 @@ public class Clock {
             }
         };
         thread.start();
-        return data;
     }
-
 }
 

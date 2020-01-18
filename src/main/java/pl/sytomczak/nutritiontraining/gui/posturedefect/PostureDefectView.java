@@ -2,6 +2,7 @@ package pl.sytomczak.nutritiontraining.gui.posturedefect;
 
 import pl.sytomczak.nutritiontraining.posturedefect.Kyphosis;
 import pl.sytomczak.nutritiontraining.posturedefect.Lordosis;
+import pl.sytomczak.nutritiontraining.posturedefect.PrintableTreatment;
 import pl.sytomczak.nutritiontraining.posturedefect.Scoliosis;
 
 import javax.swing.*;
@@ -16,7 +17,6 @@ public class PostureDefectView extends JDialog {
     private JRadioButton kyphosisTreatmentRadioButton;
     private JRadioButton lordosisTreatmentRadioButton;
     private JLabel postureJLabel;
-    private JEditorPane treatmentPane;
     private JButton buttonOK;
 
     private Kyphosis kyphosis;
@@ -48,50 +48,47 @@ public class PostureDefectView extends JDialog {
         kyphosisTreatmentRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                kyphosis = new Kyphosis();
-                treatmentPane.setText(kyphosis.getTreatments());
+                runPostureDefectTreatmentView(new Kyphosis());
             }
         });
 
         lordosisTreatmentRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                lordosis = new Lordosis();
-                treatmentPane.setText(lordosis.getTreatments());
+                runPostureDefectTreatmentView(new Lordosis());
             }
         });
 
         scoliosisRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                scoliosis = new Scoliosis();
-                treatmentPane.setText(scoliosis.getTreatments());
+                runPostureDefectTreatmentView(new Scoliosis());
             }
         });
     }
-        private void onCancel () {
-            dispose();
-        }
 
-//    private void runPostureDefectTreatmentView() {
-//        PostureDefectTreatmentView postureDefectTreatmentView = new PostureDefectTreatmentView();
-//        postureDefectTreatmentView.pack();
-//        postureDefectTreatmentView.setVisible(true);
-//        postureDefectTreatmentView.setResizable(false);
-//        postureDefectTreatmentView.setLocationRelativeTo(null);
-//
-//    }
-//
-//    public JRadioButton getScoliosisRadioButton() {
-//        return scoliosisRadioButton;
-//    }
+    private void onCancel() {
+        dispose();
+    }
 
-//    public JRadioButton getKyphosisTreatmentRadioButton() {
-//        return kyphosisTreatmentRadioButton;
-//    }
+    private void runPostureDefectTreatmentView(PrintableTreatment treatment) {
+        PostureDefectTreatmentView postureDefectTreatmentView = PostureDefectTreatmentView.getInstanceFor(treatment);
+        postureDefectTreatmentView.pack();
+        postureDefectTreatmentView.setVisible(true);
+        postureDefectTreatmentView.setResizable(false);
+        postureDefectTreatmentView.setLocationRelativeTo(null);
+    }
 
-//    public JRadioButton getLordosisTreatmentRadioButton() {
-//        return lordosisTreatmentRadioButton;
-//    }
+    public JRadioButton getScoliosisRadioButton() {
+        return scoliosisRadioButton;
+    }
+
+    public JRadioButton getKyphosisTreatmentRadioButton() {
+        return kyphosisTreatmentRadioButton;
+    }
+
+    public JRadioButton getLordosisTreatmentRadioButton() {
+        return lordosisTreatmentRadioButton;
+    }
 
 }
