@@ -45,13 +45,13 @@ public class StretchingView extends JDialog {
     }
 
     private void individualStretchingMusclesButtons() {
-        JButton bicepsFemorisAreasButton = new JButton();
+        JButton bicepsAreasButton = new JButton();
         photoLabel.setLayout(null);
-        bicepsFemorisAreasButton.setBackground(Color.RED);
-        bicepsFemorisAreasButton.setBounds(100, 100, 50, 50);
-        photoLabel.add(bicepsFemorisAreasButton);
+        bicepsAreasButton.setBackground(Color.RED);
+        bicepsAreasButton.setBounds(100, 100, 50, 50);
+        photoLabel.add(bicepsAreasButton);
 
-        bicepsFemorisAreasButton.addActionListener(new ActionListener() {
+        bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Biceps:" + Stretching.BICEPS.getFilmInYouTube());

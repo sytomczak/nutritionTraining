@@ -20,8 +20,8 @@ public class CalculateMacro {
 
     public CalculateMacroResult calculationMacro() {
         int proteinResult = (int) calculateDailyProtein();
-        int carbsResult = (int) calculateDailyCarbs();
         int fatResult = calculateDailyFat();
+        int carbsResult = (int) calculateDailyCarbs();
         int calories = (int) calculateMacro(caloriesDependingOnWeightChange);
         return new CalculateMacroResult(calories, proteinResult, fatResult, carbsResult);
     }
