@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class StretchingView extends JDialog {
+public class StretchingView extends JFrame {
     private JPanel contentPane;
     private JLabel photoLabel;
     private JEditorPane stretchPanel;

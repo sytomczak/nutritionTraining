@@ -10,7 +10,7 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.*;
 
-public class PostureDefectView extends JDialog {
+public class PostureDefectView extends JFrame {
     private JPanel postureJPanel;
 
     private JRadioButton scoliosisRadioButton;

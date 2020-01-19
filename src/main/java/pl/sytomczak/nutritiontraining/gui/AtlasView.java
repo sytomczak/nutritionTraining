@@ -28,7 +28,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AtlasView extends JDialog {
+public class AtlasView extends JFrame {
     private JButton closeButton;
     private JPanel bodyJPanel;
     private JLabel photo1jLabel;
