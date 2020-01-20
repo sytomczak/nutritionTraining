@@ -51,9 +51,9 @@
           <toolTipText value=""/>
         </properties>
       </component>
-      <scrollpane id="201ff">
+      <scrollpane id="201ff" binding="stretchingScrollPane">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <minimum-size width="90" height="500"/>
             <preferred-size width="90" height="500"/>
             <maximum-size width="90" height="500"/>
@@ -61,6 +61,8 @@
         </constraints>
         <properties>
           <background color="-1576209"/>
+          <horizontalScrollBarPolicy value="31"/>
+          <verticalScrollBarPolicy value="20"/>
         </properties>
         <border type="none"/>
         <children>

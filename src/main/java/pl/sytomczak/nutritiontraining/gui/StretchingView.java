@@ -14,6 +14,7 @@ public class StretchingView extends JFrame {
     private JLabel photoLabel;
     private JEditorPane stretchPanel;
     private JButton fullBodyButton;
+    private JScrollPane stretchingScrollPane;
     private JButton buttonCancel;
 
 
@@ -51,10 +52,24 @@ public class StretchingView extends JFrame {
         bicepsAreasButton.setBounds(623, 113, 10, 10);
         photoLabel.add(bicepsAreasButton);
 
+        JButton rhomboidsAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        rhomboidsAreasButton.setBackground(Color.red);
+        rhomboidsAreasButton.setBounds(170, 150, 10, 10);
+        photoLabel.add(rhomboidsAreasButton);
+
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Biceps:" + Stretching.BICEPS.getFilmInYouTube());
+                openLink();
+            }
+        });
+
+        rhomboidsAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Rhomboids:" + Stretching.RHOMBOIDS.getFilmInYouTube());
                 openLink();
             }
         });
