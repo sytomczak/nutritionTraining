@@ -40,12 +40,13 @@ public class StretchingView extends JFrame {
                 + "\n" + ("Time 25 min: " + Stretching.TIME_25_MIN.getFilmInYouTube()) + "\n" + ("Time 30 min: " + Stretching.TIME_30_MIN.getFilmInYouTube())
                 + "\n" + ("Time 35 min: " + Stretching.TIME_35_MIN.getFilmInYouTube()) + "\n" + ("Time 40 min: " + Stretching.TIME_40_MIN.getFilmInYouTube())
                 + "\n" + ("Time 45 min: " + Stretching.TIME_45_MIN.getFilmInYouTube()));
-        openLink();
 
 
     }
 
     private void individualStretchingMusclesButtons() {
+        openLink();
+        
         JButton bicepsAreasButton = new JButton();
         photoLabel.setLayout(null);
         bicepsAreasButton.setBackground(Color.red);
@@ -58,11 +59,16 @@ public class StretchingView extends JFrame {
         rhomboidsAreasButton.setBounds(170, 150, 10, 10);
         photoLabel.add(rhomboidsAreasButton);
 
+        JButton chestAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        chestAreasButton.setBackground(Color.red);
+        chestAreasButton.setBounds(750,180,10, 10);
+        photoLabel.add(chestAreasButton);
+
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Biceps:" + Stretching.BICEPS.getFilmInYouTube());
-                openLink();
             }
         });
 
@@ -70,7 +76,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Rhomboids:" + Stretching.RHOMBOIDS.getFilmInYouTube());
-                openLink();
+            }
+        });
+
+        chestAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Chest:" + Stretching.CHEST.getFilmInYouTube());
             }
         });
     }

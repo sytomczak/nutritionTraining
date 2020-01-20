@@ -13,7 +13,8 @@ public enum Stretching {
     TIME_5_MIN("<a href='https://www.youtube.com/watch?v=2L2lnxIcNmo'> Link 1 </a>" + "<a href='https://www.youtube.com/watch?v=6AgSw1QFltw'> Link 2 </a>" + "<a href='https://www.youtube.com/watch?v=KmwkMPnzL40'> Link 3 </a>" + "<a href='https://www.youtube.com/watch?v=ep0ABNIrwtA'> Link 4 </a>" + "<a href='https://www.youtube.com/watch?v=4zBnM_uozXM'> Link 5 </a>"),
 
     BICEPS("<a href='https://www.youtube.com/watch?v=_e1hQUxTAHc'> Link 1<br> </a>" + "<a href='https://www.youtube.com/watch?v=TuS_ZnOkg3k'> Link 2<br> </a>" + "<a href='https://www.youtube.com/watch?v=VW-I2vNdZag'> Link 3<br> </a>" + "<a href='https://www.youtube.com/watch?v=0EB8_f9mc7E'> Link 4<br> </a>" + "<a href='https://www.youtube.com/watch?v=9-sCSMHjsMs'> Link 5 </a>"),
-    RHOMBOIDS("<a href='https://www.youtube.com/watch?v=dNOMmQARQTQ'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=EuXfMoAazes'> Link 2 <br></a>" + "<a href='https://www.youtube.com/watch?v=ca5j-33Bn6c'> Link 3 <br></a>" + "<a href ='https://www.youtube.com/watch?v=XSW-RAwI3_w'> Link 4 <br></a>" + "<a href='https://www.youtube.com/watch?v=iId5avXLGhA'> Link 5 </a>");
+    RHOMBOIDS("<a href='https://www.youtube.com/watch?v=dNOMmQARQTQ'> Link 1 <br> </a>" + "<a href='https://www.youtube.com/watch?v=EuXfMoAazes'> Link 2 <br> </a>" + "<a href='https://www.youtube.com/watch?v=ca5j-33Bn6c'> Link 3 <br> </a>" + "<a href ='https://www.youtube.com/watch?v=XSW-RAwI3_w'> Link 4 <br> </a>" + "<a href='https://www.youtube.com/watch?v=iId5avXLGhA'> Link 5 </a>"),
+    CHEST("<a href='https://www.youtube.com/watch?v=SV7l1sfEmO0'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=gj3XQE9rWOg'> Link 2 <br></a>" + "<a href='https://www.youtube.com/watch?v=5cShlVEPbDA'> Link 3 <br></a>" + "<a href ='https://www.youtube.com/watch?v=NePr1XKRTLU'> Link 4 <br></a>" + "<a href='https://www.youtube.com/watch?v=4CAsFh26GGo'> Link 5 </a>");
 
 
 
