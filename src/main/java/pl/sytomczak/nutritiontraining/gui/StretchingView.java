@@ -101,6 +101,12 @@ public class StretchingView extends JFrame {
         latsAreasButton.setBounds(230, 200, 10,10);
         photoLabel.add(latsAreasButton);
 
+        JButton absAndObliqueAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        absAndObliqueAreasButton.setBackground(Color.red);
+        absAndObliqueAreasButton.setBounds(730, 240, 10,10);
+        photoLabel.add(absAndObliqueAreasButton);
+
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -161,6 +167,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Lats:" + Stretching.LATS.getFilmInYouTube());
+            }
+        });
+
+        absAndObliqueAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("ABS and Oblique:" + Stretching.ABS_AND_OBLIQUE.getFilmInYouTube());
             }
         });
     }
