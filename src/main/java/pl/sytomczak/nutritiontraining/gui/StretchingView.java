@@ -46,7 +46,7 @@ public class StretchingView extends JFrame {
 
     private void individualStretchingMusclesButtons() {
         openLink();
-        
+
         JButton bicepsAreasButton = new JButton();
         photoLabel.setLayout(null);
         bicepsAreasButton.setBackground(Color.red);
@@ -64,6 +64,12 @@ public class StretchingView extends JFrame {
         chestAreasButton.setBackground(Color.red);
         chestAreasButton.setBounds(750,180,10, 10);
         photoLabel.add(chestAreasButton);
+
+        JButton shoulderAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        shoulderAreasButton.setBackground(Color.red);
+        shoulderAreasButton.setBounds(245, 140, 10,10);
+        photoLabel.add(shoulderAreasButton);
 
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
@@ -83,6 +89,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Chest:" + Stretching.CHEST.getFilmInYouTube());
+            }
+        });
+
+        shoulderAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Shoulder:" + Stretching.SHOULDER.getFilmInYouTube());
             }
         });
     }
