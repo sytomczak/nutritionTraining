@@ -95,6 +95,12 @@ public class StretchingView extends JFrame {
         quadsAreasButton.setBounds(720, 380, 10,10);
         photoLabel.add(quadsAreasButton);
 
+        JButton latsAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        latsAreasButton.setBackground(Color.red);
+        latsAreasButton.setBounds(230, 200, 10,10);
+        photoLabel.add(latsAreasButton);
+
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -148,6 +154,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Quads:" + Stretching.QUADS.getFilmInYouTube());
+            }
+        });
+
+        latsAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Lats:" + Stretching.LATS.getFilmInYouTube());
             }
         });
     }
