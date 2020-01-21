@@ -83,6 +83,12 @@ public class StretchingView extends JFrame {
         rotatorCuffAreasButton.setBounds(220, 130, 10,10);
         photoLabel.add(rotatorCuffAreasButton);
 
+        JButton tricepsAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        tricepsAreasButton.setBackground(Color.red);
+        tricepsAreasButton.setBounds(290, 110, 10,10);
+        photoLabel.add(tricepsAreasButton);
+
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -122,6 +128,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Rotator Cuff:" + Stretching.ROTATOR_CUFF.getFilmInYouTube());
+            }
+        });
+
+        tricepsAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Triceps:" + Stretching.TRICEPS.getFilmInYouTube());
             }
         });
     }
