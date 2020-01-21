@@ -71,6 +71,12 @@ public class StretchingView extends JFrame {
         shoulderAreasButton.setBounds(245, 140, 10,10);
         photoLabel.add(shoulderAreasButton);
 
+        JButton hipAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        hipAreasButton.setBackground(Color.red);
+        hipAreasButton.setBounds(720, 320, 10,10);
+        photoLabel.add(hipAreasButton);
+
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,6 +102,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Shoulder:" + Stretching.SHOULDER.getFilmInYouTube());
+            }
+        });
+
+        hipAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Hip:" + Stretching.HIP.getFilmInYouTube());
             }
         });
     }
