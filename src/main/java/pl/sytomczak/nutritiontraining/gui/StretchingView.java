@@ -68,7 +68,7 @@ public class StretchingView extends JFrame {
         JButton shoulderAreasButton = new JButton();
         photoLabel.setLayout(null);
         shoulderAreasButton.setBackground(Color.red);
-        shoulderAreasButton.setBounds(245, 140, 10,10);
+        shoulderAreasButton.setBounds(120, 140, 10,10);
         photoLabel.add(shoulderAreasButton);
 
         JButton hipAreasButton = new JButton();
@@ -106,6 +106,12 @@ public class StretchingView extends JFrame {
         absAndObliqueAreasButton.setBackground(Color.red);
         absAndObliqueAreasButton.setBounds(730, 240, 10,10);
         photoLabel.add(absAndObliqueAreasButton);
+
+        JButton lowerBackAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        lowerBackAreasButton.setBackground(Color.red);
+        lowerBackAreasButton.setBounds(190, 270, 10,10);
+        photoLabel.add(lowerBackAreasButton);
 
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
@@ -174,6 +180,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("ABS and Oblique:" + Stretching.ABS_AND_OBLIQUE.getFilmInYouTube());
+            }
+        });
+
+        lowerBackAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Lower back:" + Stretching.LOWER_BACK.getFilmInYouTube());
             }
         });
     }
