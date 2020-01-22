@@ -101,17 +101,30 @@ public class StretchingView extends JFrame {
         latsAreasButton.setBounds(230, 200, 10,10);
         photoLabel.add(latsAreasButton);
 
-        JButton absAndObliqueAreasButton = new JButton();
+        JButton absAreasButton = new JButton();
         photoLabel.setLayout(null);
-        absAndObliqueAreasButton.setBackground(Color.red);
-        absAndObliqueAreasButton.setBounds(730, 240, 10,10);
-        photoLabel.add(absAndObliqueAreasButton);
+        absAreasButton.setBackground(Color.red);
+        absAreasButton.setBounds(710, 250, 10,10);
+        photoLabel.add(absAreasButton);
+
+        JButton obliqueAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        obliqueAreasButton.setBackground(Color.red);
+        obliqueAreasButton.setBounds(745, 245, 10,10);
+        photoLabel.add(obliqueAreasButton);
 
         JButton lowerBackAreasButton = new JButton();
         photoLabel.setLayout(null);
         lowerBackAreasButton.setBackground(Color.red);
         lowerBackAreasButton.setBounds(190, 270, 10,10);
         photoLabel.add(lowerBackAreasButton);
+
+        JButton neckAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        neckAreasButton.setBackground(Color.red);
+        neckAreasButton.setBounds(735, 130, 10,10);
+        photoLabel.add(neckAreasButton);
+
 
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
@@ -176,7 +189,14 @@ public class StretchingView extends JFrame {
             }
         });
 
-        absAndObliqueAreasButton.addActionListener(new ActionListener() {
+        absAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("ABS and Oblique:" + Stretching.ABS_AND_OBLIQUE.getFilmInYouTube());
+            }
+        });
+
+        obliqueAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("ABS and Oblique:" + Stretching.ABS_AND_OBLIQUE.getFilmInYouTube());
@@ -187,6 +207,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Lower back:" + Stretching.LOWER_BACK.getFilmInYouTube());
+            }
+        });
+
+        neckAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Neck:" + Stretching.NECK.getFilmInYouTube());
             }
         });
     }
