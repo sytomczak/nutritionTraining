@@ -131,6 +131,12 @@ public class StretchingView extends JFrame {
         hamstringAreasButton.setBounds(165, 380, 10,10);
         photoLabel.add(hamstringAreasButton);
 
+        JButton calvesAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        calvesAreasButton.setBackground(Color.red);
+        calvesAreasButton.setBounds(310, 340, 10,10);
+        photoLabel.add(calvesAreasButton);
+
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -226,6 +232,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Hamstring:" + Stretching.HAMSTRING.getFilmInYouTube());
+            }
+        });
+
+        calvesAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Calves:" + Stretching.CALVES.getFilmInYouTube());
             }
         });
     }
