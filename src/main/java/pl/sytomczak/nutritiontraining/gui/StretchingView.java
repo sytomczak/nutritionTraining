@@ -155,6 +155,12 @@ public class StretchingView extends JFrame {
         adductorsAreasButton.setBounds(640, 310, 10,10);
         photoLabel.add(adductorsAreasButton);
 
+        JButton abductorAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        abductorAreasButton.setBackground(Color.red);
+        abductorAreasButton.setBounds(290, 305, 10,10);
+        photoLabel.add(abductorAreasButton);
+
 
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
@@ -279,6 +285,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Adductors:" + Stretching.ADDUCTORS.getFilmInYouTube());
+            }
+        });
+
+        abductorAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Abductor:" + Stretching.ABDUCTOR.getFilmInYouTube());
             }
         });
     }
