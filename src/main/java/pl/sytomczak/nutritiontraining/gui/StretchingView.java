@@ -143,6 +143,12 @@ public class StretchingView extends JFrame {
         buttocksAreasButton.setBounds(220, 320, 10,10);
         photoLabel.add(buttocksAreasButton);
 
+        JButton forearmsAreasButton = new JButton();
+        photoLabel.setLayout(null);
+        forearmsAreasButton.setBackground(Color.red);
+        forearmsAreasButton.setBounds(570, 90, 10,10);
+        photoLabel.add(forearmsAreasButton);
+
 
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
@@ -253,6 +259,13 @@ public class StretchingView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 stretchPanel.setText("Buttocks:" + Stretching.BUTTOCKS.getFilmInYouTube());
+            }
+        });
+
+        forearmsAreasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stretchPanel.setText("Foreamrs:" + Stretching.FOREARMS.getFilmInYouTube());
             }
         });
     }
