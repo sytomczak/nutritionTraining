@@ -7,9 +7,6 @@ import pl.sytomczak.nutritiontraining.gui.posturedefect.PostureDefectView;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MenuView extends JFrame {
     private JPanel menuPanel;
@@ -68,7 +65,7 @@ public class MenuView extends JFrame {
         stretchingButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    StretchingView stretchingView = new StretchingView();
+                    StretchingRollingView stretchingView = new StretchingRollingView();
                     stretchingView.pack();
                     stretchingView.setResizable(false);
                     stretchingView.setVisible(true);
