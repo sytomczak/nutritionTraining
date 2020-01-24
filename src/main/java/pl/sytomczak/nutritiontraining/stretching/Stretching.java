@@ -32,13 +32,6 @@ public enum Stretching {
     ABDUCTOR("<br><a href='https://www.youtube.com/watch?v=ZMR40rOmE94'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=mUW7DhbpomE'> Link 2 <br></a>" + "<a href='https://www.youtube.com/watch?v=NFh3znDayks'> Link 3 <br></a>" + "<a href ='https://www.youtube.com/watch?v=uRdBPXVtBX4'> Link 4 <br></a>" + "<a href='https://www.youtube.com/watch?v=pQKV9bys5jc'> Link 5 </a>");
 
 
-
-
-
-
-
-
-
     private String filmInYouTube;
 
     Stretching(String filmInYouTube) {
@@ -49,16 +42,5 @@ public enum Stretching {
         return filmInYouTube;
     }
 
-
-    @Override
-    public String toString() {
-        return convertToHumanReadable(this.name());
-    }
-
-    private String convertToHumanReadable(String name) {
-        name = name.replace('_', ' ');
-        name = name.toLowerCase();
-        name = name.substring(0, 1).toUpperCase() + name.substring(1);
-        return name;
-    }
 }
+

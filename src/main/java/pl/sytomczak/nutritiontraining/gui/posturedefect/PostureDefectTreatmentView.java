@@ -3,6 +3,8 @@ package pl.sytomczak.nutritiontraining.gui.posturedefect;
 import pl.sytomczak.nutritiontraining.posturedefect.*;
 
 import javax.swing.*;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,55 +17,44 @@ public class PostureDefectTreatmentView extends JDialog {
     private JEditorPane treatmentEditorPane;
     private JScrollPane treatmentListingScrollPanel;
 
-    private Kyphosis kyphosis;
-    private Lordosis lordosis;
-    private Scoliosis scoliosis;
-
-    private PrintableTreatment treatment;
+    private Treatment treatment;
 
     private PostureDefectTreatmentView() {
         setContentPane(treatmentPanel);
         setTitle("Treatment");
-        treatmentPanel.setPreferredSize(new Dimension(500, 300));
+        treatmentPanel.setPreferredSize(new Dimension(200, 150));
         setLocationRelativeTo(getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-
-        PostureDefectView kyphosisTreatmentRadioButton = new PostureDefectView();
-        kyphosisTreatmentRadioButton.getKyphosisTreatmentRadioButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                kyphosis = new Kyphosis();
-                treatmentEditorPane.setText(kyphosis.getTreatments());
-
-            }
-        });
-
-
-        PostureDefectView lordosisTreatmentRadioButton = new PostureDefectView();
-        lordosisTreatmentRadioButton.getLordosisTreatmentRadioButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                lordosis = new Lordosis();
-                treatmentEditorPane.setText(lordosis.getTreatments());
-            }
-        });
-
-
-        PostureDefectView scoliosisTreatmentRadioButton = new PostureDefectView();
-        scoliosisTreatmentRadioButton.getScoliosisRadioButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                scoliosis = new Scoliosis();
-                treatmentEditorPane.setText(scoliosis.getTreatments());
-            }
-        });
+        openLink();
     }
 
-    public static PostureDefectTreatmentView getInstanceFor(PrintableTreatment treatment) {
-        if(windowInstance == null)  windowInstance = new PostureDefectTreatmentView();
+    public void openLink() {
+        treatmentEditorPane.setEditable(false);
+        treatmentEditorPane.setOpaque(false);
+
+        treatmentEditorPane.addHyperlinkListener(new HyperlinkListener() {
+            @Override
+            public void hyperlinkUpdate(HyperlinkEvent hle) {
+                if (HyperlinkEvent.EventType.ACTIVATED.equals(hle.getEventType())) {
+                    System.out.println(hle.getURL());
+                    Desktop desktop = Desktop.getDesktop();
+                    try {
+                        desktop.browse(hle.getURL().toURI());
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        });
+
+    }
+
+
+    public static PostureDefectTreatmentView getInstanceFor(Treatment treatment) {
+        if (windowInstance == null) windowInstance = new PostureDefectTreatmentView();
         windowInstance.treatment = treatment;
-        windowInstance.treatmentEditorPane.setText(treatment.getTreatments());
+        windowInstance.treatmentEditorPane.setText(treatment.getFilmInYouTube());
         return windowInstance;
     }
 }

@@ -1,9 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui.posturedefect;
 
-import pl.sytomczak.nutritiontraining.posturedefect.Kyphosis;
-import pl.sytomczak.nutritiontraining.posturedefect.Lordosis;
-import pl.sytomczak.nutritiontraining.posturedefect.PrintableTreatment;
-import pl.sytomczak.nutritiontraining.posturedefect.Scoliosis;
+import pl.sytomczak.nutritiontraining.posturedefect.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -18,10 +15,6 @@ public class PostureDefectView extends JFrame {
     private JRadioButton lordosisTreatmentRadioButton;
     private JLabel postureJLabel;
     private JButton buttonOK;
-
-    private Kyphosis kyphosis;
-    private Lordosis lordosis;
-    private Scoliosis scoliosis;
 
     public PostureDefectView() {
         setContentPane(postureJPanel);
@@ -48,21 +41,21 @@ public class PostureDefectView extends JFrame {
         kyphosisTreatmentRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                runPostureDefectTreatmentView(new Kyphosis());
+                runPostureDefectTreatmentView(Treatment.KYPHOSIS_TREATMENT);
             }
         });
 
         lordosisTreatmentRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                runPostureDefectTreatmentView(new Lordosis());
+                runPostureDefectTreatmentView(Treatment.LORDOSIS_TREATMENT);
             }
         });
 
         scoliosisRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                runPostureDefectTreatmentView(new Scoliosis());
+                runPostureDefectTreatmentView(Treatment.SCOLIOSIS_TREATMENT);
             }
         });
     }
@@ -71,24 +64,11 @@ public class PostureDefectView extends JFrame {
         dispose();
     }
 
-    private void runPostureDefectTreatmentView(PrintableTreatment treatment) {
+    private void runPostureDefectTreatmentView(Treatment treatment) {
         PostureDefectTreatmentView postureDefectTreatmentView = PostureDefectTreatmentView.getInstanceFor(treatment);
         postureDefectTreatmentView.pack();
         postureDefectTreatmentView.setVisible(true);
         postureDefectTreatmentView.setResizable(false);
         postureDefectTreatmentView.setLocationRelativeTo(null);
     }
-
-    public JRadioButton getScoliosisRadioButton() {
-        return scoliosisRadioButton;
-    }
-
-    public JRadioButton getKyphosisTreatmentRadioButton() {
-        return kyphosisTreatmentRadioButton;
-    }
-
-    public JRadioButton getLordosisTreatmentRadioButton() {
-        return lordosisTreatmentRadioButton;
-    }
-
 }

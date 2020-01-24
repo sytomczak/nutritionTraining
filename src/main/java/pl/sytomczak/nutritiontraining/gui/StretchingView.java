@@ -15,8 +15,6 @@ public class StretchingView extends JFrame {
     private JEditorPane stretchPanel;
     private JButton fullBodyButton;
     private JScrollPane stretchingScrollPane;
-    private JButton buttonCancel;
-
 
     public StretchingView() {
         setContentPane(contentPane);
@@ -62,103 +60,103 @@ public class StretchingView extends JFrame {
         JButton chestAreasButton = new JButton();
         photoLabel.setLayout(null);
         chestAreasButton.setBackground(Color.red);
-        chestAreasButton.setBounds(750,180,10, 10);
+        chestAreasButton.setBounds(750, 180, 10, 10);
         photoLabel.add(chestAreasButton);
 
         JButton shoulderAreasButton = new JButton();
         photoLabel.setLayout(null);
         shoulderAreasButton.setBackground(Color.red);
-        shoulderAreasButton.setBounds(120, 140, 10,10);
+        shoulderAreasButton.setBounds(120, 140, 10, 10);
         photoLabel.add(shoulderAreasButton);
 
         JButton hipAreasButton = new JButton();
         photoLabel.setLayout(null);
         hipAreasButton.setBackground(Color.red);
-        hipAreasButton.setBounds(720, 320, 10,10);
+        hipAreasButton.setBounds(720, 320, 10, 10);
         photoLabel.add(hipAreasButton);
 
         JButton rotatorCuffAreasButton = new JButton();
         photoLabel.setLayout(null);
         rotatorCuffAreasButton.setBackground(Color.red);
-        rotatorCuffAreasButton.setBounds(220, 130, 10,10);
+        rotatorCuffAreasButton.setBounds(220, 130, 10, 10);
         photoLabel.add(rotatorCuffAreasButton);
 
         JButton tricepsAreasButton = new JButton();
         photoLabel.setLayout(null);
         tricepsAreasButton.setBackground(Color.red);
-        tricepsAreasButton.setBounds(290, 110, 10,10);
+        tricepsAreasButton.setBounds(290, 110, 10, 10);
         photoLabel.add(tricepsAreasButton);
 
         JButton quadsAreasButton = new JButton();
         photoLabel.setLayout(null);
         quadsAreasButton.setBackground(Color.red);
-        quadsAreasButton.setBounds(720, 380, 10,10);
+        quadsAreasButton.setBounds(720, 380, 10, 10);
         photoLabel.add(quadsAreasButton);
 
         JButton latsAreasButton = new JButton();
         photoLabel.setLayout(null);
         latsAreasButton.setBackground(Color.red);
-        latsAreasButton.setBounds(230, 200, 10,10);
+        latsAreasButton.setBounds(230, 200, 10, 10);
         photoLabel.add(latsAreasButton);
 
         JButton absAreasButton = new JButton();
         photoLabel.setLayout(null);
         absAreasButton.setBackground(Color.red);
-        absAreasButton.setBounds(710, 250, 10,10);
+        absAreasButton.setBounds(710, 250, 10, 10);
         photoLabel.add(absAreasButton);
 
         JButton obliqueAreasButton = new JButton();
         photoLabel.setLayout(null);
         obliqueAreasButton.setBackground(Color.red);
-        obliqueAreasButton.setBounds(745, 245, 10,10);
+        obliqueAreasButton.setBounds(745, 245, 10, 10);
         photoLabel.add(obliqueAreasButton);
 
         JButton lowerBackAreasButton = new JButton();
         photoLabel.setLayout(null);
         lowerBackAreasButton.setBackground(Color.red);
-        lowerBackAreasButton.setBounds(190, 270, 10,10);
+        lowerBackAreasButton.setBounds(190, 270, 10, 10);
         photoLabel.add(lowerBackAreasButton);
 
         JButton neckAreasButton = new JButton();
         photoLabel.setLayout(null);
         neckAreasButton.setBackground(Color.red);
-        neckAreasButton.setBounds(735, 130, 10,10);
+        neckAreasButton.setBounds(735, 130, 10, 10);
         photoLabel.add(neckAreasButton);
 
         JButton hamstringAreasButton = new JButton();
         photoLabel.setLayout(null);
         hamstringAreasButton.setBackground(Color.red);
-        hamstringAreasButton.setBounds(165, 380, 10,10);
+        hamstringAreasButton.setBounds(165, 380, 10, 10);
         photoLabel.add(hamstringAreasButton);
 
         JButton calvesAreasButton = new JButton();
         photoLabel.setLayout(null);
         calvesAreasButton.setBackground(Color.red);
-        calvesAreasButton.setBounds(310, 340, 10,10);
+        calvesAreasButton.setBounds(310, 340, 10, 10);
         photoLabel.add(calvesAreasButton);
 
         JButton buttocksAreasButton = new JButton();
         photoLabel.setLayout(null);
         buttocksAreasButton.setBackground(Color.red);
-        buttocksAreasButton.setBounds(220, 320, 10,10);
+        buttocksAreasButton.setBounds(220, 320, 10, 10);
         photoLabel.add(buttocksAreasButton);
 
         JButton forearmsAreasButton = new JButton();
         photoLabel.setLayout(null);
         forearmsAreasButton.setBackground(Color.red);
-        forearmsAreasButton.setBounds(570, 90, 10,10);
+        forearmsAreasButton.setBounds(570, 90, 10, 10);
         photoLabel.add(forearmsAreasButton);
 
         JButton adductorsAreasButton = new JButton();
         photoLabel.setLayout(null);
         adductorsAreasButton.setBackground(Color.red);
-        adductorsAreasButton.setBounds(640, 310, 10,10);
+        adductorsAreasButton.setBounds(640, 310, 10, 10);
         photoLabel.add(adductorsAreasButton);
 
         JButton abductorAreasButton = new JButton();
         photoLabel.setLayout(null);
         abductorAreasButton.setBackground(Color.red);
-        abductorAreasButton.setBounds(290, 305, 10,10);
+        abductorAreasButton.setBounds(290, 305, 10, 10);
         photoLabel.add(abductorAreasButton);
 
 
