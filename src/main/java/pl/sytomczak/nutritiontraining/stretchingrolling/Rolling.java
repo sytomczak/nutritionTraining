@@ -1,11 +1,7 @@
 package pl.sytomczak.nutritiontraining.stretchingrolling;
 
 public enum Rolling {
-
-    TIME_10_MIN("<br><a href='https://www.youtube.com/watch?v=R4HhdpxaKUM'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=9XsJvZ9eWz4'> Link 2 <br></a>" + "<a href='https://www.youtube.com/watch?v=khC5J1lkC7s&list=PLcohKiyb5z6-hKKX7VDgcJgYqz8GePa0Z'> Link 3 <br></a>"),
-    TIME_15_MIN("<br><a href='https://www.youtube.com/watch?v=8PrBi68kdpo'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=Hu-rVZVSzxs'> Link 2 <br></a>" + "<a href='https://www.youtube.com/watch?v=FNZ_UFovznk'> Link 3 <br></a>"),
-    TIME_20_AND_MORE("<br><a href='https://www.youtube.com/watch?v=qH22GQj_ajk'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=sxLRzB2sMbA'> Link 2 <br></a>" + "<a href='https://www.youtube.com/watch?v=nTz0YGm18Dg'> Link 3 <br></a>"),
-
+    
     BICEPS("<br><a href='https://www.youtube.com/watch?v=lLc68MNSwZ8'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=_MRRwLlVZxY'> Link 2 <br></a>"),
     RHOMBOIDS("<br><a href='https://www.youtube.com/watch?v=yYmzxoKnQRE'> Link 1 <br> </a>" + "<a href='https://www.youtube.com/watch?v=VUXnptJLG4g'> Link 2 <br> </a>"),
     CHEST("<br><a href='https://www.youtube.com/watch?v=HBRES3n8d7c'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=8BquMJBShks'> Link 2 <br></a>"),
