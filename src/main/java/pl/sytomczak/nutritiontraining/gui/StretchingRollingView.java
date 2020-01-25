@@ -1,5 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
+import pl.sytomczak.nutritiontraining.ApplicationProperties;
 import pl.sytomczak.nutritiontraining.stretchingrolling.Rolling;
 import pl.sytomczak.nutritiontraining.stretchingrolling.Stretching;
 
@@ -9,6 +10,7 @@ import javax.swing.event.HyperlinkListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Properties;
 
 public class StretchingRollingView extends JFrame {
     private JPanel contentPane;
@@ -16,6 +18,8 @@ public class StretchingRollingView extends JFrame {
     private JEditorPane stretchPanel;
     private JButton fullBodyButton;
     private JScrollPane stretchingScrollPane;
+
+    private static final Properties PROPERTIES = ApplicationProperties.INSTANCE.getProperties();
 
     public StretchingRollingView() {
         setContentPane(contentPane);
@@ -34,16 +38,20 @@ public class StretchingRollingView extends JFrame {
     }
 
     private void onSelectFullBodyButton() {
-        stretchPanel.setText("<b>Stretching</b>" + "<br>" + "Time 5 min: " + Stretching.TIME_5_MIN.getFilmInYouTube() + "\n" + ("Time 10 min: " + Stretching.TIME_10_MIN.getFilmInYouTube())
-                + "\n" + ("Time 15 min: " + Stretching.TIME_15_MIN.getFilmInYouTube()) + "\n" + ("Time 20 min: " + Stretching.TIME_20_MIN.getFilmInYouTube())
-                + "\n" + ("Time 25 min: " + Stretching.TIME_25_MIN.getFilmInYouTube()) + "\n" + ("Time 30 min: " + Stretching.TIME_30_MIN.getFilmInYouTube())
-                + "\n" + ("Time 35 min: " + Stretching.TIME_35_MIN.getFilmInYouTube()) + "\n" + ("Time 40 min: " + Stretching.TIME_40_MIN.getFilmInYouTube())
-                + "\n" + ("Time 45 min: " + Stretching.TIME_45_MIN.getFilmInYouTube())
+//        stretchPanel.setText("<b>Stretching</b>" + "<br>" + "Time 5 min: " + Stretching.TIME_5_MIN.getFilmInYouTube() + "\n" + ("Time 10 min: " + Stretching.TIME_10_MIN.getFilmInYouTube())
+//                + "\n" + ("Time 15 min: " + Stretching.TIME_15_MIN.getFilmInYouTube()) + "\n" + ("Time 20 min: " + Stretching.TIME_20_MIN.getFilmInYouTube())
+//                + "\n" + ("Time 25 min: " + Stretching.TIME_25_MIN.getFilmInYouTube()) + "\n" + ("Time 30 min: " + Stretching.TIME_30_MIN.getFilmInYouTube())
+//                + "\n" + ("Time 35 min: " + Stretching.TIME_35_MIN.getFilmInYouTube()) + "\n" + ("Time 40 min: " + Stretching.TIME_40_MIN.getFilmInYouTube())
+//                + "\n" + ("Time 45 min: " + Stretching.TIME_45_MIN.getFilmInYouTube())
+//
+//                + "\n" + ("<b>Rolling</b>" + "<br>" + "Time 10 min: " + Rolling.TIME_10_MIN.getFilmInYouTube()) + "\n" + ("Time 15 min: " + Rolling.TIME_15_MIN.getFilmInYouTube())
+//                + "\n" + ("Time 20 and more: " + Rolling.TIME_20_AND_MORE.getFilmInYouTube()));
 
-                + "\n" + ("<b>Rolling</b>" + "<br>" + "Time 10 min: " + Rolling.TIME_10_MIN.getFilmInYouTube()) + "\n" + ("Time 15 min: " + Rolling.TIME_15_MIN.getFilmInYouTube())
-                + "\n" + ("Time 20 and more: " + Rolling.TIME_20_AND_MORE.getFilmInYouTube()));
 
-        ;
+        StringBuilder contentBuilder = new StringBuilder();
+        contentBuilder.append(PROPERTIES.getProperty("rolling.time.10.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("rolling.time.15.minutes"));
+        stretchPanel.setText(contentBuilder.toString());
 
 
     }
@@ -169,7 +177,8 @@ public class StretchingRollingView extends JFrame {
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Biceps</b>" + "<br>" + "Stretching" + Stretching.BICEPS.getFilmInYouTube() + "Rolling" + Rolling.BICEPS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.biceps") + PROPERTIES.getProperty("rolling.biceps"));
+                        //"<b>Biceps</b>" + "<br>" + "Stretching" + Stretching.BICEPS.getFilmInYouTube() + "Rolling" + Rolling.BICEPS.getFilmInYouTube());
             }
         });
 
