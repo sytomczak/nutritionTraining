@@ -39,6 +39,17 @@ public class StretchingRollingView extends JFrame {
 
     private void onSelectFullBodyButton() {
         StringBuilder contentBuilder = new StringBuilder();
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.5.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.10.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.15.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.20.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.25.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.30.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.35.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.40.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.45.minutes"));
+
+
         contentBuilder.append(PROPERTIES.getProperty("rolling.time.10.minutes"));
         contentBuilder.append(PROPERTIES.getProperty("rolling.time.15.minutes"));
         contentBuilder.append(PROPERTIES.getProperty("rolling.time.20.and.more"));

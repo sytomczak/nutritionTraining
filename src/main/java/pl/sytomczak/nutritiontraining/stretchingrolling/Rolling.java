@@ -1,7 +1,7 @@
 package pl.sytomczak.nutritiontraining.stretchingrolling;
 
 public enum Rolling {
-    
+
     BICEPS("<br><a href='https://www.youtube.com/watch?v=lLc68MNSwZ8'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=_MRRwLlVZxY'> Link 2 <br></a>"),
     RHOMBOIDS("<br><a href='https://www.youtube.com/watch?v=yYmzxoKnQRE'> Link 1 <br> </a>" + "<a href='https://www.youtube.com/watch?v=VUXnptJLG4g'> Link 2 <br> </a>"),
     CHEST("<br><a href='https://www.youtube.com/watch?v=HBRES3n8d7c'> Link 1 <br></a>" + "<a href='https://www.youtube.com/watch?v=8BquMJBShks'> Link 2 <br></a>"),
