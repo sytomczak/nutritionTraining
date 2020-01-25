@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="pl.sytomczak.nutritiontraining.gui.StretchingRollingView">
+  <grid id="cbd77" binding="contentPane" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="17" y="33" width="1265" height="622"/>
+    </constraints>
+    <properties>
+      <background color="-1576209"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="e3588" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="2" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="920" height="497"/>
+            <preferred-size width="920" height="497"/>
+            <maximum-size width="920" height="497"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1576209"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="c074" class="javax.swing.JLabel" binding="photoLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="920" height="497"/>
+                <preferred-size width="920" height="497"/>
+                <maximum-size width="920" height="497"/>
+              </grid>
+            </constraints>
+            <properties>
+              <icon value="stre.jpg"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="27ce5" class="javax.swing.JButton" binding="fullBodyButton">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-4791054"/>
+          <enabled value="true"/>
+          <hideActionText value="false"/>
+          <text value="Full Body Stretching And Rolling"/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <scrollpane id="201ff" binding="stretchingScrollPane">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="120" height="500"/>
+            <preferred-size width="120" height="500"/>
+            <maximum-size width="120" height="500"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1576209"/>
+          <horizontalScrollBarPolicy value="31"/>
+          <verticalScrollBarPolicy value="20"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="f4069" class="javax.swing.JEditorPane" binding="stretchPanel">
+            <constraints/>
+            <properties>
+              <background color="-1576209"/>
+              <contentType value="text/html"/>
+              <editable value="false"/>
+              <text value="&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    Stretching:&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="strechingButtons">
+      <member id="376b5"/>
+      <member id="15a86"/>
+    </group>
+  </buttonGroups>
+</form>

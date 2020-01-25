@@ -28,7 +28,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AtlasView extends JDialog {
+public class AtlasView extends JFrame {
     private JButton closeButton;
     private JPanel bodyJPanel;
     private JLabel photo1jLabel;
@@ -63,8 +63,8 @@ public class AtlasView extends JDialog {
 
         setContentPane(bodyJPanel);
         setTitle("Atlas");
-        bodyJPanel.setPreferredSize(new Dimension(1000,630));
-        photo1jLabel.setIcon((new ImageIcon((getClass().getResource("/body.jpg")))));
+        bodyJPanel.setPreferredSize(new Dimension(1000,645));
+        photo1jLabel.setIcon(new ImageIcon(getClass().getResource("/body.jpg")));
         setLocationRelativeTo(getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 

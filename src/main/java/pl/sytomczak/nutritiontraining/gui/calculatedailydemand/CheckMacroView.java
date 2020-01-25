@@ -68,10 +68,10 @@ public class CheckMacroView extends JFrame {
     }
 
     private void onCalculate() {
+        this.kcalTextField.setText(String.valueOf(calculateMacro.calculationMacro().getCalories()));
         this.carbsTextField.setText(String.valueOf(calculateMacro.calculationMacro().getCarbs()));
         this.fatTextField.setText(String.valueOf(calculateMacro.calculationMacro().getFat()));
         this.proteinTextField.setText(String.valueOf(calculateMacro.calculationMacro().getProtein()));
-        this.kcalTextField.setText(String.valueOf(calculateMacro.calculationMacro().getCalories()));
     }
 
     private void onCancel() {

@@ -1,20 +1,25 @@
 package pl.sytomczak.nutritiontraining.gui;
 
+import pl.sytomczak.nutritiontraining.clock.Clock;
 import pl.sytomczak.nutritiontraining.gui.calculatedailydemand.CalculateDailyDemandView;
+import pl.sytomczak.nutritiontraining.gui.posturedefect.PostureDefectView;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MenuView extends JDialog {
+public class MenuView extends JFrame {
     private JPanel menuPanel;
     private JButton calculateDailyDemandButton;
     private JButton atlasButton;
+    private JButton postureDefectButton;
+    private JButton stretchingButton;
+    private JEditorPane clockPanel;
 
     public MenuView() {
         setContentPane(menuPanel);
         setTitle("Nutrition & Training");
-        menuPanel.setPreferredSize(new Dimension(500, 300));
+        menuPanel.setPreferredSize(new Dimension(500, 400));
         getRootPane().setDefaultButton(calculateDailyDemandButton);
 
         menuPanel.registerKeyboardAction(new ActionListener() {
@@ -33,6 +38,17 @@ public class MenuView extends JDialog {
             }
         });
 
+        postureDefectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PostureDefectView postureDefectView = new PostureDefectView();
+                postureDefectView.pack();
+                postureDefectView.setVisible(true);
+                postureDefectView.setResizable(false);
+                postureDefectView.setLocationRelativeTo(null);
+            }
+        });
+
         atlasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -45,6 +61,20 @@ public class MenuView extends JDialog {
 
             }
         });
+
+        stretchingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    StretchingRollingView stretchingView = new StretchingRollingView();
+                    stretchingView.pack();
+                    stretchingView.setResizable(false);
+                    stretchingView.setVisible(true);
+                    stretchingView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                    stretchingView.setLocationRelativeTo(null);
+                }
+        });
+
+        Clock.runClock(clockPanel);
     }
 
     private void onCancel() {

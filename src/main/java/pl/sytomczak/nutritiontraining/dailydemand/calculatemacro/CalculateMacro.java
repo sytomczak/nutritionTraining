@@ -4,13 +4,13 @@ import pl.sytomczak.nutritiontraining.dailydemand.CalculationResult;
 import pl.sytomczak.nutritiontraining.dailydemand.DailyDemandCalculation;
 
 public class CalculateMacro {
-    private int protein;
+    private double protein;
     private int fat;
     private double carbs;
     private VariableCaloriesDependingOnWeightChange caloriesDependingOnWeightChange;
 
     private DailyDemandCalculation dailyDemandCalculation;
-    private DailyDemandCalculation weight;
+    private int weight;
     private CalculationResult result;
 
     public CalculateMacro(CalculationResult calculation) {
@@ -19,11 +19,11 @@ public class CalculateMacro {
 
 
     public CalculateMacroResult calculationMacro() {
-        int proteinResult = calculateDailyProtein();
-        double carbsResult = calculateDailyCarbs();
+        int proteinResult = (int) calculateDailyProtein();
         int fatResult = calculateDailyFat();
-        double calories = calculateMacro(caloriesDependingOnWeightChange);
-        return new CalculateMacroResult(carbsResult, proteinResult, fatResult, calories);
+        int carbsResult = (int) calculateDailyCarbs();
+        int calories = (int) calculateMacro(caloriesDependingOnWeightChange);
+        return new CalculateMacroResult(calories, proteinResult, fatResult, carbsResult);
     }
 
     private double calculateMacro(VariableCaloriesDependingOnWeightChange caloriesDependingOnWeightChange) {
@@ -31,7 +31,7 @@ public class CalculateMacro {
 
         switch (caloriesDependingOnWeightChange) {
             case LOSE:
-                 calculateCalories = result.getDemandInKcal() - VariableCaloriesDependingOnWeightChange.LOSE.getNumberOfCaloriesDependingOnWeightChange();
+                calculateCalories = result.getDemandInKcal() - VariableCaloriesDependingOnWeightChange.LOSE.getNumberOfCaloriesDependingOnWeightChange();
                 break;
             case GAIN:
                 calculateCalories = result.getDemandInKcal() + VariableCaloriesDependingOnWeightChange.GAIN.getNumberOfCaloriesDependingOnWeightChange();
@@ -45,49 +45,55 @@ public class CalculateMacro {
         return calculateCalories;
     }
 
-        private int calculateDailyProtein () {
+    private double calculateDailyProtein() {
+        if (VariableCaloriesDependingOnWeightChange.LOSE.equals(caloriesDependingOnWeightChange)) {
+            protein = 2.3 * result.getWeight();
+        } else if (VariableCaloriesDependingOnWeightChange.GAIN.equals(caloriesDependingOnWeightChange)) {
+            protein = 2.1 * result.getWeight();
+        } else
             protein = 2 * result.getWeight();
-            return protein;
 
-        }
+        return Math.round(protein * 100.0) / 100.0;
+    }
 
-        private int calculateDailyFat () {
-            fat = result.getWeight();
-            return fat;
+    private int calculateDailyFat() {
+        fat = 10 + result.getWeight();
+        return fat;
 
-        }
+    }
 
-        private double calculateDailyCarbs () {
-            double kcal = 0;
-            double calculateKcal = calculateMacro(caloriesDependingOnWeightChange);
-            kcal =  calculateKcal - ((fat * 9) + (protein * 4));
-            carbs = kcal / 4;
-            return Math.round(carbs * 100.0) / 100.0;
-        }
+    private double calculateDailyCarbs() {
+        double kcal = 0;
+        double calculateKcal = calculateMacro(caloriesDependingOnWeightChange);
+        kcal = calculateKcal - ((fat * 9) + (protein * 4));
+        carbs = kcal / 4;
 
-        public int getProtein () {
-            return protein;
-        }
+        return Math.round(carbs * 100.0) / 100.0;
+    }
 
-        public void setProtein ( int protein){
-            this.protein = protein;
-        }
+    public double getProtein() {
+        return protein;
+    }
 
-        public int getFat () {
-            return fat;
-        }
+    public void setProtein(int protein) {
+        this.protein = protein;
+    }
 
-        public void setFat ( int fat){
-            this.fat = fat;
-        }
+    public int getFat() {
+        return fat;
+    }
 
-        public double getCarbs () {
-            return carbs;
-        }
+    public void setFat(int fat) {
+        this.fat = fat;
+    }
 
-        public void setCarbs ( double carbs){
-            this.carbs = carbs;
-        }
+    public double getCarbs() {
+        return carbs;
+    }
+
+    public void setCarbs(double carbs) {
+        this.carbs = carbs;
+    }
 
     public VariableCaloriesDependingOnWeightChange getCaloriesDependingOnWeightChange() {
         return caloriesDependingOnWeightChange;
@@ -97,20 +103,20 @@ public class CalculateMacro {
         this.caloriesDependingOnWeightChange = caloriesDependingOnWeightChange;
     }
 
-    public DailyDemandCalculation getDailyDemandCalculation () {
-            return dailyDemandCalculation;
-        }
-
-        public void setDailyDemandCalculation (DailyDemandCalculation dailyDemandCalculation){
-            this.dailyDemandCalculation = dailyDemandCalculation;
-        }
-
-        public DailyDemandCalculation getWeight () {
-            return weight;
-        }
-
-        public void setWeight (DailyDemandCalculation weight){
-            this.weight = weight;
-        }
-
+    public DailyDemandCalculation getDailyDemandCalculation() {
+        return dailyDemandCalculation;
     }
+
+    public void setDailyDemandCalculation(DailyDemandCalculation dailyDemandCalculation) {
+        this.dailyDemandCalculation = dailyDemandCalculation;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+}
