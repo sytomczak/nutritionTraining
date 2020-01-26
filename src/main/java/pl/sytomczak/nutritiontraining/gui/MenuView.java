@@ -16,7 +16,7 @@ public class MenuView extends JFrame {
     private JButton stretchingButton;
     private JEditorPane clockPanel;
     private JButton dailyChallengeButton;
-    private JButton warm_upAndQuickTreningButton;
+    private JButton warm_upAndQuickTrainingButton;
 
     public MenuView() {
         setContentPane(menuPanel);
@@ -74,6 +74,18 @@ public class MenuView extends JFrame {
                     stretchingView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                     stretchingView.setLocationRelativeTo(null);
                 }
+        });
+
+        dailyChallengeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DailyChallengeView dailyChallengeView = new DailyChallengeView();
+                dailyChallengeView.pack();
+                dailyChallengeView.setResizable(false);
+                dailyChallengeView.setVisible(true);
+                dailyChallengeView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                dailyChallengeView.setLocationRelativeTo(null);
+            }
         });
 
         Clock.runClock(clockPanel);
