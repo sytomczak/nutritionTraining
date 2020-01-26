@@ -1,6 +1,7 @@
 package pl.sytomczak.nutritiontraining.gui;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class DailyChallengeView extends JFrame {
@@ -11,7 +12,9 @@ public class DailyChallengeView extends JFrame {
 
     public DailyChallengeView() {
         setContentPane(contentPane);
-        getRootPane().setDefaultButton(checkButton);
+        setTitle("Daily Challenge");
+        setLocationRelativeTo(getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         checkButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -22,6 +25,7 @@ public class DailyChallengeView extends JFrame {
 
 
     private void onOK() {
-        dispose();
+
     }
+
 }

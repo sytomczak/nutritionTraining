@@ -88,6 +88,18 @@ public class MenuView extends JFrame {
             }
         });
 
+        warm_upAndQuickTrainingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                WarmupAndQuickTrainingView warmupAndQuickTrainingView = new WarmupAndQuickTrainingView();
+                warmupAndQuickTrainingView.pack();
+                warmupAndQuickTrainingView.setResizable(false);
+                warmupAndQuickTrainingView.setVisible(true);
+                warmupAndQuickTrainingView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                warmupAndQuickTrainingView.setLocationRelativeTo(null);
+            }
+        });
+
         Clock.runClock(clockPanel);
     }
 
