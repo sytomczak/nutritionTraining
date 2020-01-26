@@ -1,11 +1,13 @@
 package pl.sytomczak.nutritiontraining.gui.posturedefect;
 
+import pl.sytomczak.nutritiontraining.ApplicationProperties;
 import pl.sytomczak.nutritiontraining.posturedefect.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Properties;
 
 public class PostureDefectView extends JFrame {
     private JPanel postureJPanel;
