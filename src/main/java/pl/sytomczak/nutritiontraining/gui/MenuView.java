@@ -15,11 +15,13 @@ public class MenuView extends JFrame {
     private JButton postureDefectButton;
     private JButton stretchingButton;
     private JEditorPane clockPanel;
+    private JButton dailyChallengeButton;
+    private JButton warm_upAndQuickTreningButton;
 
     public MenuView() {
         setContentPane(menuPanel);
         setTitle("Nutrition & Training");
-        menuPanel.setPreferredSize(new Dimension(500, 400));
+        menuPanel.setPreferredSize(new Dimension(700, 400));
         getRootPane().setDefaultButton(calculateDailyDemandButton);
 
         menuPanel.registerKeyboardAction(new ActionListener() {

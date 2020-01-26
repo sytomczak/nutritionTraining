@@ -1,7 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
 import pl.sytomczak.nutritiontraining.ApplicationProperties;
-import pl.sytomczak.nutritiontraining.stretchingrolling.Rolling;
 
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
