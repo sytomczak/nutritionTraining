@@ -1,10 +1,8 @@
 package pl.sytomczak.nutritiontraining.gui.posturedefect;
 
 import pl.sytomczak.nutritiontraining.ApplicationProperties;
-import pl.sytomczak.nutritiontraining.posturedefect.*;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Properties;
@@ -17,6 +15,8 @@ public class PostureDefectView extends JFrame {
     private JRadioButton lordosisTreatmentRadioButton;
     private JLabel postureJLabel;
     private JButton buttonOK;
+
+    private static final Properties PROPERTIES = ApplicationProperties.INSTANCE.getProperties();
 
     public PostureDefectView() {
         setContentPane(postureJPanel);
@@ -43,21 +43,21 @@ public class PostureDefectView extends JFrame {
         kyphosisTreatmentRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                runPostureDefectTreatmentView(Treatment.KYPHOSIS_TREATMENT);
+                runPostureDefectTreatmentView(PROPERTIES.getProperty("posture.defect.kyphosis.treatment"));
             }
         });
 
         lordosisTreatmentRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                runPostureDefectTreatmentView(Treatment.LORDOSIS_TREATMENT);
+                runPostureDefectTreatmentView(PROPERTIES.getProperty("posture.defect.lordosis.treatment"));
             }
         });
 
         scoliosisRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                runPostureDefectTreatmentView(Treatment.SCOLIOSIS_TREATMENT);
+                runPostureDefectTreatmentView(PROPERTIES.getProperty("posture.defect.scolsiosis.treatment"));
             }
         });
     }
@@ -66,7 +66,7 @@ public class PostureDefectView extends JFrame {
         dispose();
     }
 
-    private void runPostureDefectTreatmentView(Treatment treatment) {
+    private void runPostureDefectTreatmentView(String treatment) {
         PostureDefectTreatmentView postureDefectTreatmentView = PostureDefectTreatmentView.getInstanceFor(treatment);
         postureDefectTreatmentView.pack();
         postureDefectTreatmentView.setVisible(true);

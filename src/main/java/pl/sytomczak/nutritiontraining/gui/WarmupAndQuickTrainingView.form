@@ -36,6 +36,7 @@
                 <constraints/>
                 <properties>
                   <background color="-1576209"/>
+                  <contentType value="text/html"/>
                   <editable value="false"/>
                 </properties>
               </component>
@@ -52,6 +53,7 @@
                 <constraints/>
                 <properties>
                   <background color="-1576209"/>
+                  <contentType value="text/html"/>
                   <editable value="false"/>
                 </properties>
               </component>

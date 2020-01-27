@@ -49,10 +49,10 @@ public class PostureDefectTreatmentView extends JDialog {
     }
 
 
-    public static PostureDefectTreatmentView getInstanceFor(Treatment treatment) {
+    public static PostureDefectTreatmentView getInstanceFor(String treatment) {
         if (windowInstance == null) windowInstance = new PostureDefectTreatmentView();
-        windowInstance.treatment = treatment;
-        windowInstance.treatmentEditorPane.setText(treatment.getFilmInYouTube());
+//        windowInstance.treatment = treatment;
+        windowInstance.treatmentEditorPane.setText(treatment);
         return windowInstance;
     }
 }

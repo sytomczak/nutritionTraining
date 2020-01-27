@@ -6,7 +6,6 @@ import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
 import java.awt.*;
-import java.awt.event.*;
 import java.util.Properties;
 
 public class WarmupAndQuickTrainingView extends JFrame {
