@@ -1,7 +1,5 @@
 package pl.sytomczak.nutritiontraining.gui.posturedefect;
 
-import pl.sytomczak.nutritiontraining.posturedefect.*;
-
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
@@ -15,7 +13,6 @@ public class PostureDefectTreatmentView extends JDialog {
     private JEditorPane treatmentEditorPane;
     private JScrollPane treatmentListingScrollPanel;
 
-    private Treatment treatment;
 
     private PostureDefectTreatmentView() {
         setContentPane(treatmentPanel);
@@ -48,10 +45,8 @@ public class PostureDefectTreatmentView extends JDialog {
 
     }
 
-
     public static PostureDefectTreatmentView getInstanceFor(String treatment) {
         if (windowInstance == null) windowInstance = new PostureDefectTreatmentView();
-//        windowInstance.treatment = treatment;
         windowInstance.treatmentEditorPane.setText(treatment);
         return windowInstance;
     }

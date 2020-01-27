@@ -3,7 +3,6 @@ package pl.sytomczak.nutritiontraining.gui;
 import pl.sytomczak.nutritiontraining.dailychallenge.DailyChallenge;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class DailyChallengeView extends JFrame {
@@ -11,7 +10,6 @@ public class DailyChallengeView extends JFrame {
     private JButton checkButton;
     private JEditorPane dailyChallengeEditorPane;
     private DailyChallenge dailyChallenge;
-
 
     public DailyChallengeView() {
         dailyChallenge =  new DailyChallenge();
@@ -22,21 +20,15 @@ public class DailyChallengeView extends JFrame {
 
         checkButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                onOK();
+                check();
             }
         });
 
         dailyChallengeEditorPane.setText("Click the button!");
-
-
     }
 
-
-    private void onOK() {
+    private void check() {
         dailyChallengeEditorPane.setText(dailyChallenge.getRandomChallenge());
-
-
-
     }
 
 }
