@@ -24,6 +24,16 @@ public class WarmupAndQuickTrainingView extends JFrame {
 
         warmUpEditorPane1.setText(PROPERTIES.getProperty("warm.up"));
 
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(PROPERTIES.getProperty("quick.training.5.minutes"));
+        stringBuilder.append(PROPERTIES.getProperty("quick.training.10.minutes"));
+        stringBuilder.append(PROPERTIES.getProperty("quick.training.15.minutes"));
+        stringBuilder.append(PROPERTIES.getProperty("quick.training.20.minutes"));
+        stringBuilder.append(PROPERTIES.getProperty("quick.training.25.minutes"));
+        stringBuilder.append(PROPERTIES.getProperty("quick.training.30.minutes"));
+        quickTrainingEditorPane.setText(stringBuilder.toString());
+
+
         openLink();
     }
         public void openLink() {
