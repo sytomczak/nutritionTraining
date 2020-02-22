@@ -33,26 +33,46 @@ public class WarmupAndQuickTrainingView extends JFrame {
         stringBuilder.append(PROPERTIES.getProperty("quick.training.30.minutes"));
         quickTrainingEditorPane.setText(stringBuilder.toString());
 
-
         openLink();
-    }
-        public void openLink() {
-            warmUpEditorPane1.setEditable(false);
-            warmUpEditorPane1.setOpaque(false);
 
-            warmUpEditorPane1.addHyperlinkListener(new HyperlinkListener() {
-                @Override
-                public void hyperlinkUpdate(HyperlinkEvent hle) {
-                    if (HyperlinkEvent.EventType.ACTIVATED.equals(hle.getEventType())) {
-                        System.out.println(hle.getURL());
-                        Desktop desktop = Desktop.getDesktop();
-                        try {
-                            desktop.browse(hle.getURL().toURI());
-                        } catch (Exception ex) {
-                            ex.printStackTrace();
-                        }
+    }
+
+
+    public void openLink() {
+        warmUpEditorPane1.setEditable(false);
+        warmUpEditorPane1.setOpaque(false);
+        quickTrainingEditorPane.setEditable(false);
+        quickTrainingEditorPane.setOpaque(false);
+
+        warmUpEditorPane1.addHyperlinkListener(new HyperlinkListener() {
+            @Override
+            public void hyperlinkUpdate(HyperlinkEvent hle) {
+                if (HyperlinkEvent.EventType.ACTIVATED.equals(hle.getEventType())) {
+                    System.out.println(hle.getURL());
+                    Desktop desktop = Desktop.getDesktop();
+                    try {
+                        desktop.browse(hle.getURL().toURI());
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
                     }
                 }
-            });
+            }
+        });
+
+
+        quickTrainingEditorPane.addHyperlinkListener(new HyperlinkListener() {
+            @Override
+            public void hyperlinkUpdate(HyperlinkEvent hle) {
+                if (HyperlinkEvent.EventType.ACTIVATED.equals(hle.getEventType())) {
+                    System.out.println(hle.getURL());
+                    Desktop desktop = Desktop.getDesktop();
+                    try {
+                        desktop.browse(hle.getURL().toURI());
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 }

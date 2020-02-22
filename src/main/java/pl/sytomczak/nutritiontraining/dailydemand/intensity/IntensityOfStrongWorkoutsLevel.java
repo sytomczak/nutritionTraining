@@ -8,10 +8,11 @@ public enum IntensityOfStrongWorkoutsLevel {
     private int levelOfIntensityStrongWorkouts;
 
     IntensityOfStrongWorkoutsLevel(int levelOfIntensityStrongWorkouts) {
-        this.levelOfIntensityStrongWorkouts = levelOfIntensityStrongWorkouts;}
+        this.levelOfIntensityStrongWorkouts = levelOfIntensityStrongWorkouts;
+    }
 
-        public int getLevelOfIntensityStrongWorkouts() {
-            return levelOfIntensityStrongWorkouts;
+    public int getLevelOfIntensityStrongWorkouts() {
+        return levelOfIntensityStrongWorkouts;
 
     }
 }

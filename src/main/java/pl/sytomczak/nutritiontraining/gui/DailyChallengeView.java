@@ -12,7 +12,7 @@ public class DailyChallengeView extends JFrame {
     private DailyChallenge dailyChallenge;
 
     public DailyChallengeView() {
-        dailyChallenge =  new DailyChallenge();
+        dailyChallenge = new DailyChallenge();
         setContentPane(contentPane);
         setTitle("Daily Challenge");
         setLocationRelativeTo(getParent());

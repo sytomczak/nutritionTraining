@@ -56,7 +56,7 @@ public class CalculateDailyDemandView extends JFrame {
     public CalculateDailyDemandView() {
         dailyDemandCalculation = new DailyDemandCalculation();
         setContentPane(mainPanel);
-        mainPanel.setPreferredSize(new Dimension(450,500));
+        mainPanel.setPreferredSize(new Dimension(450, 500));
         setTitle("Calculate Daily Demand");
         getRootPane().setDefaultButton(calculateButton);
 

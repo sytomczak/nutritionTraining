@@ -8,10 +8,11 @@ public enum IntensityOfAerobicWorkoutsLevel {
     private double levelOfIntensityAerobicWorkouts;
 
     IntensityOfAerobicWorkoutsLevel(double levelOfIntensityAerobicWorkouts) {
-        this.levelOfIntensityAerobicWorkouts = levelOfIntensityAerobicWorkouts; }
+        this.levelOfIntensityAerobicWorkouts = levelOfIntensityAerobicWorkouts;
+    }
 
-        public double getLevelOfIntensityAerobicWorkouts() {
-            return levelOfIntensityAerobicWorkouts;
+    public double getLevelOfIntensityAerobicWorkouts() {
+        return levelOfIntensityAerobicWorkouts;
 
     }
 }

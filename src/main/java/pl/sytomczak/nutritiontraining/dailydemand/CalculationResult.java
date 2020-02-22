@@ -22,13 +22,15 @@ public class CalculationResult {
         return demandInKcal;
     }
 
-    public int getWeight() { return weight;}
+    public int getWeight() {
+        return weight;
+    }
 
     @Override
     public String toString() {
         return "CalculationResult{" +
                 "bmi=" + bmi +
-                ", demandInKcal=" + demandInKcal + "weight=" + weight+
+                ", demandInKcal=" + demandInKcal + "weight=" + weight +
                 '}';
     }
 
@@ -39,7 +41,7 @@ public class CalculationResult {
         CalculationResult result = (CalculationResult) o;
         return Double.compare(result.bmi, bmi) == 0 &&
 
-          demandInKcal == result.demandInKcal &&
+                demandInKcal == result.demandInKcal &&
                 weight == result.weight;
     }
 

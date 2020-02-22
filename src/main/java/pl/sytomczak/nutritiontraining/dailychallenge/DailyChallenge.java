@@ -19,7 +19,7 @@ public class DailyChallenge {
     }
 
     private String randomizeChallenge() {
-        int lastIndex = challengeList.size() -1;
+        int lastIndex = challengeList.size() - 1;
         int randomNum = ThreadLocalRandom.current().nextInt(0, lastIndex);
 
         return challengeList.get(randomNum);

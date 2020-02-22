@@ -201,7 +201,7 @@ public class DailyDemandCalculation {
         bmi = bmi * bmi;
         bmi = weight / bmi;
 
-        return Math.round(bmi *100.0) / 100.0;
+        return Math.round(bmi * 100.0) / 100.0;
     }
 
     public int getWeight() {
