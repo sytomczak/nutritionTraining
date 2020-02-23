@@ -7,7 +7,9 @@ public enum ThermalEffectOfFood {
 
     private double numberOfThermalEffect;
 
-    ThermalEffectOfFood(double numberOfThermalEffect) {this.numberOfThermalEffect = numberOfThermalEffect; }
+    ThermalEffectOfFood(double numberOfThermalEffect) {
+        this.numberOfThermalEffect = numberOfThermalEffect;
+    }
 
     public double getNumberOfThermalEffect() {
         return numberOfThermalEffect;

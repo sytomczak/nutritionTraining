@@ -8,7 +8,9 @@ public enum EpocInStrongWorkouts {
 
     private double numberOfEpoc;
 
-    EpocInStrongWorkouts(double numberOfEpoc) {this.numberOfEpoc = numberOfEpoc;}
+    EpocInStrongWorkouts(double numberOfEpoc) {
+        this.numberOfEpoc = numberOfEpoc;
+    }
 
     public double getNumberOfEpoc() {
         return numberOfEpoc;

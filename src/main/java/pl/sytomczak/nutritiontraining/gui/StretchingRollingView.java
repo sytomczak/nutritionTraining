@@ -1,7 +1,6 @@
 package pl.sytomczak.nutritiontraining.gui;
 
-import pl.sytomczak.nutritiontraining.stretchingrolling.Rolling;
-import pl.sytomczak.nutritiontraining.stretchingrolling.Stretching;
+import pl.sytomczak.nutritiontraining.ApplicationProperties;
 
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
@@ -9,6 +8,7 @@ import javax.swing.event.HyperlinkListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Properties;
 
 public class StretchingRollingView extends JFrame {
     private JPanel contentPane;
@@ -16,6 +16,8 @@ public class StretchingRollingView extends JFrame {
     private JEditorPane stretchPanel;
     private JButton fullBodyButton;
     private JScrollPane stretchingScrollPane;
+
+    private static final Properties PROPERTIES = ApplicationProperties.INSTANCE.getProperties();
 
     public StretchingRollingView() {
         setContentPane(contentPane);
@@ -34,16 +36,21 @@ public class StretchingRollingView extends JFrame {
     }
 
     private void onSelectFullBodyButton() {
-        stretchPanel.setText("<b>Stretching</b>" + "<br>" + "Time 5 min: " + Stretching.TIME_5_MIN.getFilmInYouTube() + "\n" + ("Time 10 min: " + Stretching.TIME_10_MIN.getFilmInYouTube())
-                + "\n" + ("Time 15 min: " + Stretching.TIME_15_MIN.getFilmInYouTube()) + "\n" + ("Time 20 min: " + Stretching.TIME_20_MIN.getFilmInYouTube())
-                + "\n" + ("Time 25 min: " + Stretching.TIME_25_MIN.getFilmInYouTube()) + "\n" + ("Time 30 min: " + Stretching.TIME_30_MIN.getFilmInYouTube())
-                + "\n" + ("Time 35 min: " + Stretching.TIME_35_MIN.getFilmInYouTube()) + "\n" + ("Time 40 min: " + Stretching.TIME_40_MIN.getFilmInYouTube())
-                + "\n" + ("Time 45 min: " + Stretching.TIME_45_MIN.getFilmInYouTube())
+        StringBuilder contentBuilder = new StringBuilder();
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.5.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.10.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.15.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.20.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.25.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.30.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.35.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.40.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("stretching.time.45.minutes"));
 
-                + "\n" + ("<b>Rolling</b>" + "<br>" + "Time 10 min: " + Rolling.TIME_10_MIN.getFilmInYouTube()) + "\n" + ("Time 15 min: " + Rolling.TIME_15_MIN.getFilmInYouTube())
-                + "\n" + ("Time 20 and more: " + Rolling.TIME_20_AND_MORE.getFilmInYouTube()));
-
-        ;
+        contentBuilder.append(PROPERTIES.getProperty("rolling.time.10.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("rolling.time.15.minutes"));
+        contentBuilder.append(PROPERTIES.getProperty("rolling.time.20.and.more"));
+        stretchPanel.setText(contentBuilder.toString());
 
 
     }
@@ -169,133 +176,133 @@ public class StretchingRollingView extends JFrame {
         bicepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Biceps</b>" + "<br>" + "Stretching" + Stretching.BICEPS.getFilmInYouTube() + "Rolling" + Rolling.BICEPS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.biceps") + PROPERTIES.getProperty("rolling.biceps"));
             }
         });
 
         rhomboidsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Rhomboids</b>" + "<br>" + "Stretching" + Stretching.RHOMBOIDS.getFilmInYouTube() + "Rolling" + Rolling.RHOMBOIDS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.rhomboids") + PROPERTIES.getProperty("rolling.rhomboids"));
             }
         });
 
         chestAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Chest</b>" + "<br>" + "Stretching" + Stretching.CHEST.getFilmInYouTube() + "Rolling" + Rolling.CHEST.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.chest") + PROPERTIES.getProperty("rolling.chest"));
             }
         });
 
         shoulderAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Shoulder</b>" + "<br>" + "Stretching" + Stretching.SHOULDER.getFilmInYouTube() + "Rolling" + Rolling.SHOULDER.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.shoulder") + PROPERTIES.getProperty("rolling.shoulder"));
             }
         });
 
         hipAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Hip</b>" + "<br>" + "Stretching" + Stretching.HIP.getFilmInYouTube() + "Rolling" + Rolling.HIP.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.hip") + PROPERTIES.getProperty("rolling.hip"));
             }
         });
 
         rotatorCuffAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Rotator Cuff</b>" + "<br>" + "Stretching" + Stretching.ROTATOR_CUFF.getFilmInYouTube() + "Rolling" + Rolling.ROTATOR_CUFF.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.rotator.cuff") + PROPERTIES.getProperty("rolling.rotator.cuff"));
             }
         });
 
         tricepsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Triceps</b>" + "<br>" + "Stretching" + Stretching.TRICEPS.getFilmInYouTube() + "Rolling" + Rolling.TRICEPS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.triceps") + PROPERTIES.getProperty("rolling.triceps"));
             }
         });
 
         quadsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Quads</b>" + "<br>" + "Stretching" + Stretching.QUADS.getFilmInYouTube() + "Rolling" + Rolling.QUADS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.quads") + PROPERTIES.getProperty("rolling.quads"));
             }
         });
 
         latsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Lats</b>" + "<br>" + "Stretching" + Stretching.LATS.getFilmInYouTube() + "Rolling" + Rolling.LATS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.lats") + PROPERTIES.getProperty("rolling.lats"));
             }
         });
 
         absAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>ABS</b>" + "<br>" + "Stretching" + Stretching.ABS_AND_OBLIQUE.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.abs"));
             }
         });
 
         obliqueAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Oblique</b>" + "<br>" + "Stretching" + Stretching.ABS_AND_OBLIQUE.getFilmInYouTube() + "Rolling" + Rolling.ABS_AND_OBLIQUE.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.oblique") + PROPERTIES.getProperty("rolling.abs.and.oblique"));
             }
         });
 
         lowerBackAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Lower back</b>" + "<br>" + "Stretching" + Stretching.LOWER_BACK.getFilmInYouTube() + "Rolling" + Rolling.LOWER_BACK.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.lower.back") + PROPERTIES.getProperty("rolling.lower.back"));
             }
         });
 
         neckAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Neck</b>" + "<br>" + "Stretching" + Stretching.NECK.getFilmInYouTube() + "Rolling" + Rolling.NECK.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.neck") + PROPERTIES.getProperty("rolling.neck"));
             }
         });
 
         hamstringAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Hamstring</b>" + "<br>" + "Stretching" + Stretching.HAMSTRING.getFilmInYouTube() + "Rolling" + Rolling.HAMSTRING.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.hamstring") + PROPERTIES.getProperty("rolling.hamstring"));
             }
         });
 
         calvesAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Calves</b>" + "<br>" + "Stretching" + Stretching.CALVES.getFilmInYouTube() + "Rolling" + Rolling.CALVES.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.calves") + PROPERTIES.getProperty("rolling.calves"));
             }
         });
 
         buttocksAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Buttocks</b>" + "<br>" + "Stretching" + Stretching.BUTTOCKS.getFilmInYouTube() + "Rolling" + Rolling.BUTTOCKS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.buttocks") + PROPERTIES.getProperty("rolling.buttocks"));
             }
         });
 
         forearmsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Foreamrs</b>" + "<br>" + "Stretching" + Stretching.FOREARMS.getFilmInYouTube() + "Rolling" + Rolling.FOREARMS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.forearms") + PROPERTIES.getProperty("rolling.forearms"));
             }
         });
 
         adductorsAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Adductors</b>" + "<br>" + "Stretching" + Stretching.ADDUCTORS.getFilmInYouTube() + "Rolling" + Rolling.ADDUCTORS.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.adductor") + PROPERTIES.getProperty("rolling.adductors"));
             }
         });
 
         abductorAreasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stretchPanel.setText("<b>Abductor</b>" + "<br>" + "Stretching" + Stretching.ABDUCTOR.getFilmInYouTube() + "Rolling" + Rolling.ABDUCTOR.getFilmInYouTube());
+                stretchPanel.setText(PROPERTIES.getProperty("stretching.abductor") + PROPERTIES.getProperty("rolling.abductor"));
             }
         });
     }

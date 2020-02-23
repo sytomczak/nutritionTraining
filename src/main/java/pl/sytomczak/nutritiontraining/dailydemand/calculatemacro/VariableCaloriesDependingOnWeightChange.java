@@ -7,9 +7,12 @@ public enum VariableCaloriesDependingOnWeightChange {
 
     private int numberOfCaloriesDependingOnWeightChange;
 
-    VariableCaloriesDependingOnWeightChange(int numberOfCaloriesDependingOnWeightChange) {this.numberOfCaloriesDependingOnWeightChange = numberOfCaloriesDependingOnWeightChange;}
+    VariableCaloriesDependingOnWeightChange(int numberOfCaloriesDependingOnWeightChange) {
+        this.numberOfCaloriesDependingOnWeightChange = numberOfCaloriesDependingOnWeightChange;
+    }
 
-    public int getNumberOfCaloriesDependingOnWeightChange() { return numberOfCaloriesDependingOnWeightChange;
+    public int getNumberOfCaloriesDependingOnWeightChange() {
+        return numberOfCaloriesDependingOnWeightChange;
     }
 
 }

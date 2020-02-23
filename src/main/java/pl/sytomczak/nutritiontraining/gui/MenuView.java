@@ -15,11 +15,13 @@ public class MenuView extends JFrame {
     private JButton postureDefectButton;
     private JButton stretchingButton;
     private JEditorPane clockPanel;
+    private JButton dailyChallengeButton;
+    private JButton warm_upAndQuickTrainingButton;
 
     public MenuView() {
         setContentPane(menuPanel);
         setTitle("Nutrition & Training");
-        menuPanel.setPreferredSize(new Dimension(500, 400));
+        menuPanel.setPreferredSize(new Dimension(700, 400));
         getRootPane().setDefaultButton(calculateDailyDemandButton);
 
         menuPanel.registerKeyboardAction(new ActionListener() {
@@ -65,13 +67,37 @@ public class MenuView extends JFrame {
         stretchingButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    StretchingRollingView stretchingView = new StretchingRollingView();
-                    stretchingView.pack();
-                    stretchingView.setResizable(false);
-                    stretchingView.setVisible(true);
-                    stretchingView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                    stretchingView.setLocationRelativeTo(null);
-                }
+                StretchingRollingView stretchingView = new StretchingRollingView();
+                stretchingView.pack();
+                stretchingView.setResizable(false);
+                stretchingView.setVisible(true);
+                stretchingView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                stretchingView.setLocationRelativeTo(null);
+            }
+        });
+
+        dailyChallengeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DailyChallengeView dailyChallengeView = new DailyChallengeView();
+                dailyChallengeView.pack();
+                dailyChallengeView.setResizable(false);
+                dailyChallengeView.setVisible(true);
+                dailyChallengeView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                dailyChallengeView.setLocationRelativeTo(null);
+            }
+        });
+
+        warm_upAndQuickTrainingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                WarmupAndQuickTrainingView warmupAndQuickTrainingView = new WarmupAndQuickTrainingView();
+                warmupAndQuickTrainingView.pack();
+                warmupAndQuickTrainingView.setResizable(false);
+                warmupAndQuickTrainingView.setVisible(true);
+                warmupAndQuickTrainingView.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                warmupAndQuickTrainingView.setLocationRelativeTo(null);
+            }
         });
 
         Clock.runClock(clockPanel);
